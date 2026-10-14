@@ -14,6 +14,10 @@ NAC20 quản lý việc kết nối vào mạng có dây và không dây, xác t
 
 ## Triển khai
 
+Hướng dẫn cài đặt chi tiết bằng tiếng Việt nằm trong [Cài đặt NAC20](docs/NAC20_CAI_DAT.md) và hiển thị trực tiếp tại **Trạng thái → Giới thiệu** trên giao diện quản trị. Nội dung gồm chuẩn bị bộ cài, VPS, TLS, Connector, xác thực MAC, nhập MAC qua API và kiểm thử.
+
+Kho hiện chưa có bộ cài NAC20 trong mục Releases. Cần xây dựng và nghiệm thu bộ gói từ đúng phiên bản mã nguồn trước khi thực hiện bước cài đặt gói; không có kho APT NAC20 tại 20.com.vn được công bố trong kho này.
+
 Đây là hệ thống máy chủ Linux, không phải ứng dụng chỉ cần mở một trang HTML. Hãy xây dựng gói cài đặt bằng quy trình trong kho mã nguồn và kiểm tra trên môi trường thử nghiệm trước khi đưa vào vận hành.
 
 Máy chủ phải có locale `vi_VN.UTF-8`. Trên Debian, bật `vi_VN.UTF-8 UTF-8` trong `/etc/locale.gen` rồi chạy `locale-gen`. Trên hệ thống dùng glibc có thể chạy `localedef -i vi_VN -f UTF-8 vi_VN.UTF-8`. Chạy `make translation` để biên dịch bộ dịch cổng đăng ký; bản dịch quản trị được đóng gói cùng giao diện.

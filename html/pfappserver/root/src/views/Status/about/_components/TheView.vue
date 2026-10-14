@@ -95,6 +95,7 @@
         <b-button variant="outline-primary" @click="filter = ''">Xóa bộ lọc</b-button>
       </div>
     </main>
+    <installation-guide />
     <footer class="nac20-footer"><strong>NAC20</strong><span>Công Ty TNHH TN20 · 20.com.vn</span></footer>
   </div>
 </template>
@@ -103,6 +104,7 @@
 import { computed, onMounted, ref, watch } from '@vue/composition-api'
 import i18n from '@/utils/locale'
 import { useSections as useConfigSections } from '@/views/Configuration/_composables/useSections'
+import InstallationGuide from './InstallationGuide'
 
 const setup = (props, context) => {
   const { root: { $store, $router } = {} } = context
@@ -380,6 +382,7 @@ const setup = (props, context) => {
 // @vue/component
 export default {
   name: 'the-view',
+  components: { InstallationGuide },
   setup
 }
 </script>
