@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="[% lang.replace('_', '-') || 'vi' %]">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Công Ty TNHH TN20" />
+  <link rel="icon" type="image/svg+xml" href="/common/nac20.svg" />
   <!-- Indicate that light and dark theme are supported. Default is first "light". -->
   <meta name="color-scheme" content="light dark">
   <link href="/common/styles.css" media="screen" rel="stylesheet" type="text/css" />
@@ -63,7 +65,7 @@
           <div class="o-layout--center u-padding-horizontal u-padding-horizontal@tablet">
 
             [% IF logo %]
-            <img src="[% logo %]" class="u-padding-bottom pf-logo no-select" alt=""/>
+            <img src="[% logo %]" class="u-padding-bottom pf-logo no-select" alt="NAC20"/>
             [% END %]
 
             [% IF title.defined %]
@@ -101,5 +103,6 @@
       </div>
     </div>
   </main>
+  <footer class="o-layout--center u-padding-small">NAC20 · Công Ty TNHH TN20 · 20.com.vn</footer>
 </body>
 </html>

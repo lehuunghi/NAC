@@ -3,6 +3,7 @@ import CompositionApi from '@vue/composition-api'
 import BootstrapVue from 'bootstrap-vue'
 import i18n from '@/utils/locale'
 import VueTimeago from 'vue-timeago'
+import dateLocaleVi from '@/utils/dateLocaleVi'
 import Icon from 'vue-awesome/components/Icon'
 import 'vue-awesome/icons/arrow-circle-right'
 import 'vue-awesome/icons/arrow-down'
@@ -173,8 +174,9 @@ Vue.config.performance = process.env.VUE_APP_DEBUG === 'true'
 
 Vue.use(VueTimeago, {
   name: 'Timeago',
-  locale: undefined,
+  locale: 'vi',
   locales: {
+    vi: dateLocaleVi,
     'fr': require('date-fns/locale/fr')
   }
 })

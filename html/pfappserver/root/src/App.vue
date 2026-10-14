@@ -1,9 +1,9 @@
 <template>
   <div :class="{ 'w-saas': isSaas, 'wo-saas': !isSaas }">
-    <b-navbar toggleable="md" fixed="top" type="dark" class="navbar-expand-md bg-dark" :class="{ 'alert-danger': warnings.length > 0 }">
+    <b-navbar toggleable="md" fixed="top" type="dark" class="navbar-expand-md bg-dark nac20-navbar" :class="{ 'alert-danger': warnings.length > 0 }">
       <b-nav-toggle target="navbar"></b-nav-toggle>
-      <b-navbar-brand to="/status/about" @click.native="closeFullscreenDocs">
-        <img src="@/assets/packetfence.white.small.svg"/>
+      <b-navbar-brand to="/status/about">
+        <img src="@/assets/nac20.svg" alt="NAC20" width="132" height="32"/>
       </b-navbar-brand>
       <b-collapse is-nav id="navbar">
         <b-navbar-nav v-show="isAuthenticated">
@@ -41,9 +41,6 @@
             <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-item to="/logout">{{ $t('Log out') }}</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item @click="toggleDocumentationViewer" :active="showDocumentationViewer" v-b-tooltip.hover.bottom.d300 title="Alt + Shift + H">
-            <icon name="question-circle"></icon>
-          </b-nav-item>
           <b-nav-item to="/live-logs" v-b-tooltip.hover.bottom.d300 title="Alt + Shift + L"
             :active="$route.path.startsWith('/live-logs')">
             <icon name="scroll" :class="{ 'text-success': hasRunningSessions }" />
@@ -64,18 +61,7 @@
         <b-button v-if="warning.to" size="sm" variant="outline-light" class="ml-2" :to="warning.to">{{ warning.toLabel }}</b-button>
       </div>
     </b-container>
-    <b-container :class="[{ 'pt-6': warnings.length === 0, 'documentation-container': isAuthenticated }, documentationViewerClass]" fluid>
-      <app-documentation v-show="isAuthenticated">
-        <div class="py-1 pl-3" v-show="version">
-          <b-form-text v-t="'Packetfence Version'"/> {{ version }}
-        </div>
-        <div class="py-1 pl-3" v-show="gitCommitId">
-          <b-form-text v-t="'GIT Commit ID'"/> <b-link :href="`https://github.com/inverse-inc/packetfence/commit/${gitCommitId}`" target="_blank">{{ gitCommitId }}</b-link>
-        </div>
-        <div class="py-1 pl-3" v-show="hostname">
-          <b-form-text v-t="'Server Hostname'"/> {{ hostname }}
-        </div>
-      </app-documentation>
+    <b-container :class="{ 'pt-6': warnings.length === 0 }" class="nac20-workspace" fluid>
       <router-view/>
     </b-container>
     <!-- Show login if session expires -->
@@ -87,7 +73,6 @@
 
 <script>
 import AppApiProgress from '@/components/AppApiProgress'
-import AppDocumentation from '@/components/AppDocumentation'
 import AppLogin from '@/components/AppLogin'
 import AppNotifications from '@/components/AppNotifications'
 import AppNotificationToasts from '@/components/AppNotificationToasts'
@@ -95,7 +80,6 @@ import IconCounter from '@/components/IconCounter'
 
 const components = {
   AppApiProgress,
-  AppDocumentation,
   AppLogin,
   AppNotifications,
   AppNotificationToasts,
@@ -112,28 +96,6 @@ const setup = (props, context) => {
 
   const isDebug = process.env.VUE_APP_DEBUG === 'true'
   const isSaas = computed(() => $store.getters['system/isSaas'])
-
-  const documentationViewerClass = ref(null)
-  const showDocumentationViewer = computed(() => $store.getters['documentation/showViewer'])
-  watch(showDocumentationViewer, (a) => {
-    if (a) // shown
-      documentationViewerClass.value = 'documentation-enter'
-    else {
-      documentationViewerClass.value = 'documentation-leave'
-      setTimeout(() => {
-        documentationViewerClass.value = null
-      }, 300) // match the animation duration defined in pfDocumentation.vue
-    }
-  })
-  const toggleDocumentationViewer = () => {
-    $store.dispatch('documentation/toggleViewer')
-  }
-
-  const closeFullscreenDocs = () => {
-    if ($store.getters['documentation/fullscreen']) {
-      $store.dispatch('documentation/closeViewer')
-    }
-  }
 
   const isAuthenticated = computed(() => $store.getters['session/isAuthenticated'])
   const isConfiguratorActive = computed(() => $store.state.session.configuratorActive)
@@ -158,10 +120,7 @@ const setup = (props, context) => {
 
   const apiOK = computed(() => $store.state.session.api)
   const chartsOK = computed(() => $store.state.session.charts)
-  const gitCommitId = computed(() => $store.getters['system/git_commit_id'])
-  const hostname = computed(() => $store.getters['system/hostname'])
   const username = computed(() => $store.state.session.username)
-  const version = computed(() => $store.getters['system/version'])
 
   const uuidRe = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/
   const hasRunningSessions = computed(() => {
@@ -192,10 +151,8 @@ const setup = (props, context) => {
     $store.dispatch('session/setLanguage', { lang })
   }
 
-  // get navigator language
-  let navigatorLanguage = window.navigator.language.split(/-/)[0]
-  if (!['en', 'fr'].includes(navigatorLanguage))
-    navigatorLanguage = 'en'
+  // NAC20 defaults to Vietnamese; explicit user preferences still apply.
+  const navigatorLanguage = 'vi'
 
   // load language from user preferences
   const settings = ref({ language: navigatorLanguage })
@@ -235,11 +192,6 @@ const setup = (props, context) => {
           $router.push('/live-logs')
             .catch(e => { if (e.name !== "NavigationDuplicated") throw e })
           break
-        case keyCode === 72: // H
-          e.preventDefault()
-          $store.dispatch('documentation/toggleViewer')
-            .catch(e => { if (e.name !== "NavigationDuplicated") throw e })
-          break
         case keyCode === 78 && canRoute('/nodes'): // N
           e.preventDefault()
           $router.push('/nodes')
@@ -275,10 +227,7 @@ const setup = (props, context) => {
     canRoute,
     apiOK,
     chartsOK,
-    gitCommitId,
-    hostname,
     username,
-    version,
 
     // user preferences
     settings,
@@ -288,11 +237,6 @@ const setup = (props, context) => {
     // live logs
     hasRunningSessions,
 
-    // documentation
-    documentationViewerClass,
-    showDocumentationViewer,
-    toggleDocumentationViewer,
-    closeFullscreenDocs,
   }
 }
 

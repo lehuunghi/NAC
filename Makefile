@@ -167,7 +167,7 @@ raddb/sites-enabled:
 .PHONY: translation
 
 translation:
-	for TRANSLATION in de en es fr he_IL it nb_NO nl pl_PL pt_BR tr_TR; do\
+	for TRANSLATION in vi de en es fr he_IL it nb_NO nl pl_PL pt_BR tr_TR; do\
 		/usr/bin/msgfmt conf/locale/$$TRANSLATION/LC_MESSAGES/packetfence.po\
 		  --output-file conf/locale/$$TRANSLATION/LC_MESSAGES/packetfence.mo;\
 	done
@@ -480,9 +480,9 @@ material:
 	mkdir -p $(CURDIR)/$(DESTDIR)
 	perl $(SRC_ADDONSDIR)/dev-helpers/bin/switch_options_json.pl > $(CURDIR)/$(DESTDIR)/switches.json
 
-html/captive-portal/profile-templates/default/logo.png:
+html/captive-portal/profile-templates/default/logo.svg:
 	mkdir -p html/captive-portal/profile-templates/default
-	cp html/common/packetfence-cp.png /usr/local/pf/html/captive-portal/profile-templates/default/logo.png
+	cp html/common/nac20.svg /usr/local/pf/html/captive-portal/profile-templates/default/logo.svg
 
 html/captive-portal/profile-templates/default/theme.css:
 	mkdir -p html/captive-portal/profile-templates/default

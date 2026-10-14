@@ -4,12 +4,12 @@
 # general.domain
 #
 # Domain name of PacketFence system.
-domain=packetfence.org
+domain=20.com.vn
 #
 # general.hostname
 #
 # Hostname of PacketFence system.  This is concatenated with the domain in Apache rewriting rules and therefore must be resolvable by clients.
-hostname=packetfence
+hostname=nac20
 #
 # general.dhcpservers
 #
@@ -18,7 +18,7 @@ dhcpservers=127.0.0.1
 # general.send_anonymous_stats
 #
 # Whether or not to send anonymous statistics on how you use PacketFence
-send_anonymous_stats = enabled
+send_anonymous_stats = disabled
 #
 # general.timezone
 #
@@ -992,7 +992,7 @@ api_max_expiration=12h
 # advanced.language
 #
 # Language choice for the communication with administrators
-language=en_US
+language=vi_VN
 #
 # advanced.admin_csp_security_headers
 #

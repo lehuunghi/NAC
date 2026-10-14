@@ -1,0 +1,2574 @@
+# English translations for PacketFence package.
+# Copyright (C) 2005-2026 Inverse inc.
+# This file is distributed under the same license as the PacketFence package.
+#
+# Vietnamese localization for NAC20 by Công Ty TNHH TN20.
+# Machine-assisted translation; core interface terminology reviewed.
+msgid ""
+msgstr ""
+"Project-Id-Version: 15.2.0\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-10-15 00:00+0700\n"
+"Last-Translator: Công Ty TNHH TN20 <info@20.com.vn>\n"
+"Language-Team: Công Ty TNHH TN20\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Root.pm
+msgid " with bandwidth balance : %s,"
+msgstr " với cân bằng bandwidth: %s,"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Root.pm
+msgid " with time balance : %s,"
+msgstr " với sự cân bằng thời gian: %s,"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Root.pm
+msgid " with unregistration date : %s,"
+msgstr " với ngày không tồn tại: %s,"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/Email.pm
+msgid "%s: Email activation required"
+msgstr "%s: cần thiết kích hoạt thư điện tử"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/Sponsor.pm
+msgid "%s: Guest access request"
+msgstr "%sYêu cầu truy cập khách"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "%s: Guest access request accepted"
+msgstr "%s: yêu cầu truy cập khách được chấp nhận"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"A <i>Security Warning</i> will appear, asking if you're sure you'd like to "
+"install the certificate. Click the <i>Yes</i> button."
+msgstr ""
+"A <i>Cảnh báo bảo mật</i> sẽ xuất hiện, hỏi nếu bạn chắc chắn bạn muốn cài "
+"đặt chứng nhận. Nhấn vào <i>Phải.</i> Nút."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"A confirmation will appear, indicating that the certificate import was "
+"successful. Press <i>OK</i>."
+msgstr ""
+"Xác nhận sẽ xuất hiện, ngụ ý nhập chứng nhận đã thành công. Bấm <i>Được "
+"rồi</i>."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"A file browser will appear, allowing you to select the certificate. Locate "
+"the certificate you downloaded previously (it may be in a folder called "
+"<i>Downloads</i>), and double-click to open it."
+msgstr ""
+"Một trình duyệt tập tin sẽ xuất hiện, cho phép bạn chọn chứng nhận. Xác định"
+" chứng nhận bạn đã tải về trước (có thể nó nằm trong thư mục tên <i>Tải "
+"về</i>), và nhấn đúp để mở nó ra."
+
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+msgid "A password reset was requested for your account."
+msgstr "Có yêu cầu đặt lại mật khẩu cho tài khoản của bạn."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"A prompt will appear asking whether to trust the certificate authority. "
+"Select <i>Trust this certificate for identifying websites</i> and then click"
+" <i>OK</i>."
+msgstr ""
+"Một dấu nhắc sẽ xuất hiện hỏi có nên tin nhà cầm quyền chứng nhận hay không."
+" Chọn <i>Tin chứng nhận này để xác định trang Mạng</i> rồi nhấn vào <i>Được "
+"rồi</i>."
+
+# html/captive-portal/templates/pki_provider/packetfence_local.html
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+# html/captive-portal/templates/pki_provider/scep.html
+msgid ""
+"A random certificate password has been generated for you. Please note it as "
+"it will be necessary to complete the process."
+msgstr ""
+"Một mật khẩu chứng nhận ngẫu nhiên đã được tạo ra cho bạn. Xin chú ý vì nó "
+"cần thiết để hoàn tất tiến trình này."
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid ""
+"A screen will appear called <i>Install Profile</i>. Tap the <i>Install</i> "
+"button in the top-right corner of the screen."
+msgstr ""
+"Name <i>Cài đặt hồ sơ</i>Gõ cửa <i>Cài đặt</i> Nút ở góc trên bên phải của "
+"màn hình."
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "AUP is required and it"
+msgstr "Một đồng xu được yêu cầu và nó"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_confirmed.html
+msgid "Access Authorized"
+msgstr "Truy cập đã được cấp phép"
+
+# html/captive-portal/templates/activation/sponsor_set_access_durations.html
+msgid "Access duration"
+msgstr "Thời hạn truy cập"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Access granted"
+msgstr "Đã cấp quyền truy cập"
+
+# html/captive-portal/templates/activation/sponsor_accepted.html
+msgid "Access to the guest network granted"
+msgstr "Đã cấp quyền truy cập mạng khách"
+
+# html/captive-portal/templates/activation/sponsor_accepted.html
+msgid "Access to the guest network has been granted."
+msgstr "Bạn đã được cấp quyền truy cập mạng khách."
+
+# html/captive-portal/templates/provisioner/deny.html
+# html/captive-portal/templates/provisioner/google_workspace_chromebook.html
+msgid ""
+"According to the provisioner configuration, this device cannot access the "
+"network."
+msgstr "Theo cấu hình bộ tạm thời, thiết bị này không thể truy cập mạng."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/ShowLocalAccount.pm
+msgid "Account created"
+msgstr "Đã tạo tài khoản"
+
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "Activate Access"
+msgstr "Kích hoạt truy cập"
+
+# pf::person::FIELDS
+msgid "Address"
+msgstr "Địa chỉ"
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid ""
+"After clicking <i>Install</i>, another dialogue will appear, asking if you "
+"are <i>sure you want to trust this issuer</i>. Click <i>OK</i> here."
+msgstr ""
+"Sau khi nhắp vào <i>Cài đặt</i>Một cuộc đối thoại khác sẽ xuất hiện, hỏi bạn"
+" có <i>Chắc chắn bạn muốn tin tưởng người đưa tin này</i>Nhấn vào <i>Được "
+"rồi</i> Đây."
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid ""
+"After registering, you will be given temporary network access for %s "
+"minutes. In order to complete your registration, you will need to click on "
+"the link emailed to you."
+msgstr ""
+"Sau khi đăng ký, bạn sẽ được truy cập mạng tạm thời cho %s Để hoàn tất việc "
+"đăng ký, bạn cần phải nhấn vào liên kết đã gửi cho bạn."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "Always trust certificate"
+msgstr "Luôn tin cậy chứng thư số"
+
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+msgid "An account has been created for you to access our network."
+msgstr "Một tài khoản đã được tạo để bạn truy cập mạng của chúng tôi."
+
+# html/captive-portal/templates/account.html
+msgid "An e-mail with the login informations will follow in the next minutes"
+msgstr "Một e-mail với thông tin đăng nhập sẽ theo sau trong phút tới"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Root.pm
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Application.pm
+msgid "An error occured"
+msgstr "Đã xảy ra lỗi"
+
+# html/captive-portal/templates/lost_stolen.html
+msgid ""
+"An error occured while trying to declare the device %s as lost or stolen."
+msgstr "Gặp lỗi khi cố công bố thiết bị %s bị mất hoặc bị đánh cắp."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "An type and activation code is required"
+msgstr "Cần thiết mã kích hoạt và loại"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Android certificate installation"
+msgstr "Cài đặt chứng nhận Antro"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid "Android certificate installation confirmation"
+msgstr "Xác nhận việc cài đặt chứng nhận An- net"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid "Android certificate name prompt"
+msgstr "Dấu nhắc tên chứng nhận gốc"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid ""
+"Android devices vary greatly, so you may not see exactly the same thing if "
+"you are using another device or a different version of Android; however, the"
+" general process and wording should be the same."
+msgstr ""
+"Các thiết bị steroid khác nhau rất nhiều, vì vậy bạn có thể không thấy chính"
+" xác điều tương tự nếu bạn đang sử dụng một thiết bị khác hoặc một phiên bản"
+" khác của người máy; tuy nhiên, quá trình tổng quát và từ ngữ nên giống "
+"nhau."
+
+# pf::person::FIELDS
+msgid "Anniversary"
+msgstr "Ngày kỉ niệm"
+
+# pf::person::FIELDS
+msgid "Apartment_number"
+msgstr "Số căn hộ"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"At the <i>Completing the Certificate Import Wizard</i> screen, press the "
+"<i>Finish</i> button."
+msgstr ""
+"Tại <i>Trình quản lý chứng nhận nhập xong</i> màn hình, ấn nút <i>Kết "
+"thúc</i> Nút."
+
+# html/captive-portal/templates/mfa/TOTP.html
+msgid "Authentication code"
+msgstr "Mã xác thực"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"Back at the main wizard screen, the <i>Certificate store</i> box should now "
+"show <i>Trusted Root Certification Authorities</i>. Press <i>Next</i> again."
+msgstr ""
+"Trở lại màn hình pháp sư chính, <i>Cửa hàng chứng nhận</i> hộp bây giờ nên "
+"hiển thị <i>Các nhà cầm quyền chứng thực căn bản</i>Nhấn nút <i>Tiếp "
+"theo</i> Một lần nữa."
+
+# html/captive-portal/templates/status/forgot_password.html
+# html/captive-portal/templates/status/forgot_password_sent.html
+msgid "Back to Login"
+msgstr "Quay lại đăng nhập"
+
+# html/captive-portal/templates/status.html
+msgid "Bandwidth balance "
+msgstr "Cân bằng băng thông "
+
+# html/captive-portal/templates/activation/sponsor_login.html
+msgid "Before we proceed with guest activation, we need you to authenticate."
+msgstr ""
+"Trước khi chúng tôi tiến hành kích hoạt khách, chúng tôi cần anh xác thực "
+"quyền."
+
+# html/captive-portal/templates/emails/emails-
+# billing_stripe_customer.subscription.deleted.html
+msgid "Billing cancellation"
+msgstr "Việc hủy bỏ tính tiền"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "Billing invoice"
+msgstr "Hóa đơn thanh toán"
+
+# pf::person::FIELDS
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid "Browse for the certificate file you downloaded earlier and select it."
+msgstr "Duyệt tìm tập tin chứng nhận bạn tải về trước đó và chọn nó."
+
+# pf::person::FIELDS
+msgid "Building_number"
+msgstr "Số tòa nhà"
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+msgid "CVE"
+msgstr "CVE"
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+msgid "CVSS score"
+msgstr "Điểm CVSS"
+
+# html/captive-portal/templates/status.html
+# html/captive-portal/templates/status/billing_cancel_subscription.html
+msgid "Cancel"
+msgstr "Hủy"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "Cancel subscription"
+msgstr "Hủy đăng ký"
+
+# pf::person::FIELDS
+msgid "Cell_phone"
+msgstr "Điện thoại di động"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/TLSEnrollment.pm
+# html/captive-portal/templates/pki_provider/packetfence_local.html
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+# html/captive-portal/templates/pki_provider/scep.html
+msgid "Certificate generation for EAP TLS connection"
+msgstr "Thế hệ chứng nhận cho AIP TLS kết nối"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Certificate installation"
+msgstr "Cài đặt chứng thư số"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "Certificate is not trusted"
+msgstr "Chứng thư số chưa được tin cậy"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "Certificate is trusted"
+msgstr "Chứng thư số đã được tin cậy"
+
+# html/captive-portal/templates/ssl_inspection/common.html
+msgid ""
+"Certificate test failed. Please download the certificate and install it by "
+"following the instructions, or contact your administrator."
+msgstr ""
+"Việc thử ra chứng nhận bị lỗi. Xin hãy tải về chứng nhận và cài đặt nó bằng "
+"cách làm theo hướng dẫn, hoặc liên lạc với nhà quản trị."
+
+# html/captive-portal/templates/status.html
+msgid "Change my password"
+msgstr "Đổi mật khẩu của tôi"
+
+# html/captive-portal/templates/status/reset_password.html
+msgid "Change your password"
+msgstr "Đổi mật khẩu"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Choose the access duration"
+msgstr "Chọn thời gian truy cập"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Chrome OS certificate installation"
+msgstr "Cài đặt chứng nhận Chrome OS"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid "Chrome Settings menu option"
+msgstr "Tùy chọn trình đơn thiết lập Chrome"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid "Chrome Settings page"
+msgstr "Thiết lập kiểu Chrome trang"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid "Chrome certificate authority prompt"
+msgstr "Nhắc nhà cầm quyền chứng nhận Chrome"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid "Chrome certificate manager"
+msgstr "Bộ quản lý chứng nhận Chrme"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid "Chrome download bar"
+msgstr "Thanh tải về Chrome"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid "Chrome file browser"
+msgstr "Trình duyệt tập tin Chrome"
+
+# html/captive-portal/templates/provisioner/kandji.html
+msgid "Click here to access the enrollment page"
+msgstr "Nhấn vào đây để truy cập trang đăng ký"
+
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+msgid "Click the button below to reset your password."
+msgstr "Nhấn vào nút bên dưới để đặt lại mật khẩu."
+
+# pf::person::FIELDS
+msgid "Company"
+msgstr "Công ty"
+
+# html/captive-portal/templates/status.html
+msgid "Computer name "
+msgstr "Tên máy tính "
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/SMS.pm
+msgid "Confirm Mobile Phone Number"
+msgstr "Xác nhận số điện thoại di động"
+
+# html/captive-portal/templates/status/reset_password_token.html
+msgid "Confirm Password"
+msgstr "Xác nhận mật khẩu"
+
+# html/captive-portal/templates/status/reset_password.html
+msgid "Confirm your password"
+msgstr "Xác nhận mật khẩu của bạn"
+
+# html/captive-portal/templates/account.html
+# html/captive-portal/templates/challenge.html
+# html/captive-portal/templates/message.html
+# html/captive-portal/templates/mfa/TOTP.html
+# html/captive-portal/templates/provisioner/accept.html
+# html/captive-portal/templates/provisioner/airwatch.html
+# html/captive-portal/templates/provisioner/android.html
+# html/captive-portal/templates/provisioner/dpsk.html
+# html/captive-portal/templates/provisioner/intune.html
+# html/captive-portal/templates/provisioner/jamf.html
+# html/captive-portal/templates/provisioner/jamfCloud.html
+# html/captive-portal/templates/provisioner/kandji.html
+# html/captive-portal/templates/provisioner/mobileconfig.html
+# html/captive-portal/templates/provisioner/mobileiron.html
+# html/captive-portal/templates/provisioner/sentinelone.html
+# html/captive-portal/templates/provisioner/windows.html
+# html/captive-portal/templates/select-role.html
+# html/captive-portal/templates/signin.html
+# html/captive-portal/templates/sms/validate.html
+# html/captive-portal/templates/ssl_inspection.html
+# html/captive-portal/templates/survey.html
+msgid "Continue"
+msgstr "Tiếp tục"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "Cost"
+msgstr "Chi phí"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Could not find unregistration date for this activation code."
+msgstr "Không tìm thấy ngày tháng không tồn tại cho mã kích hoạt này."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Could not find unregistration date or role for this activation code."
+msgstr ""
+"Không tìm thấy ngày tháng hay vai trò chưa xác thực cho mã kích hoạt này."
+
+# html/captive-portal/templates/account.html
+msgid "Created account %s"
+msgstr "Tạo tài khoản %s"
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Created on"
+msgstr "Ngày tạo"
+
+# html/captive-portal/templates/status.html
+msgid "Current Role "
+msgstr "Vai trò hiện tại "
+
+# pf::person::FIELDS
+msgid "Custom_field_1"
+msgstr "Tự chọn"
+
+# pf::person::FIELDS
+msgid "Custom_field_2"
+msgstr "Tự chọn"
+
+# pf::person::FIELDS
+msgid "Custom_field_3"
+msgstr "Tự chọn_field_3"
+
+# pf::person::FIELDS
+msgid "Custom_field_4"
+msgstr "Tự chọn"
+
+# pf::person::FIELDS
+msgid "Custom_field_5"
+msgstr "Tự chọn"
+
+# pf::person::FIELDS
+msgid "Custom_field_6"
+msgstr "Tự chọn_field_6"
+
+# pf::person::FIELDS
+msgid "Custom_field_7"
+msgstr "Tự chọn_field_7"
+
+# pf::person::FIELDS
+msgid "Custom_field_8"
+msgstr "Tự chọn_field_8"
+
+# pf::person::FIELDS
+msgid "Custom_field_9"
+msgstr "Tự chọn_field_9"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "Date Of Birth"
+msgstr "Ngày sinh"
+
+# html/captive-portal/templates/status.html
+msgid "Declare as lost or stolen"
+msgstr "Khai báo là bị thất lạc hay bị đánh cắp"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_provisioning_policy
+msgid "Default Provisioning policy"
+msgstr "Chính sách cung cấp mặc định"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_admin_sso_policy
+msgid "Default admin SSO policy"
+msgstr "Quản trị mặc định SSO chính sách"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_pending_policy
+msgid "Default pending policy"
+msgstr "Chính sách chờ mặc định"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_policy
+msgid "Default portal policy"
+msgstr "Chính sách cổng mặc định"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_registration_policy
+msgid "Default registration policy"
+msgstr "Chính sách đăng ký mặc định"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"Depending on your browser and configuration, you may see a <i>Security "
+"Warning</i> which asks if you're sure you want to open the file; if so, "
+"click <i>Open</i> once more."
+msgstr ""
+"Tùy thuộc vào trình duyệt và cấu hình, bạn có thể thấy một <i>Cảnh báo bảo "
+"mật</i> Hỏi xem bạn có chắc muốn mở tập tin đó không; nếu có, hãy nhấn vào "
+"<i>Mở</i> Một lần nữa."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"Depending on your browser and configuration, you will probably be asked "
+"whether you would like to open the file or save it; choose <i>Open</i>. "
+"Depending on your browser, you may then have to click <i>Open</i> a second "
+"time."
+msgstr ""
+"Tùy thuộc vào trình duyệt và cấu hình của bạn, rất có thể bạn sẽ được hỏi "
+"nếu bạn muốn mở tập tin hay lưu nó. <i>Mở</i>Tùy thuộc vào trình duyệt, bạn "
+"có thể phải click vào <i>Mở</i> lần thứ hai."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"Depending on your configuration, you may be prompted to save the "
+"certificate. If so, select a folder to save the file in, and then click "
+"<i>Save</i>. (In Chrome OS and some other configurations, the file may "
+"simply download immediately.) When the download has finished, the icon will "
+"flash in the download bar at the bottom of the screen50"
+msgstr ""
+"Tùy thuộc vào cấu hình của bạn, bạn có thể được nhắc lưu chứng nhận. Nếu "
+"vậy, hãy chọn thư mục cần lưu tập tin vào, rồi nhấn vào <i>Lưu</i>.. (Trong "
+"hệ thống kiểu hệ thống tập tin và một số cấu hình khác, tập tin có thể đơn "
+"giản tải xuống ngay lập tức.) Khi tải về xong, biểu tượng sẽ hiển thị trong "
+"thanh tải về ở dưới màn hình 50"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid ""
+"Depending on your device and its configuration, you may be prompted to enter"
+" your device PIN. If you don't have a PIN set, you maybe prompted to create "
+"one."
+msgstr ""
+"Tùy thuộc vào thiết bị và cấu hình của nó, bạn có thể được nhắc nhập mã định"
+" dạng PIN. Nếu bạn không có tập PIN, có lẽ bạn sẽ tạo ra một."
+
+# html/captive-portal/templates/billing/tier.html
+msgid "Description"
+msgstr "Mô tả"
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+msgid "Detail link"
+msgstr "Liên kết chi tiết"
+
+# html/captive-portal/templates/device-registration/registration.html
+msgid "Device MAC address"
+msgstr "Địa chỉ MAC của thiết bị"
+
+# html/captive-portal/templates/device-registration/registration.html
+msgid "Device Type"
+msgstr "Loại thiết bị"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/DeviceRegistration.pm
+msgid "Device registration landing"
+msgstr "Name"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/DeviceRegistration.pm
+msgid "Device registration module is not enabled"
+msgstr "Chức năng đăng ký thiết bị chưa được bật"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "Do NOT authorize access if you were not expecting this guest."
+msgstr "KHÔNG cấp quyền truy cập nếu bạn không chờ khách này."
+
+# html/captive-portal/templates/waiting.html
+msgid "Do not close this page until your access has been approved"
+msgstr ""
+"Không đóng trang này cho đến khi quyền truy cập của bạn được phê duyệt"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"Do not double-click the file after the download has finished; instead, click"
+" the Chrome menu (usually appearing as three horizontal lines) in the top "
+"right corner. Then, click the <i>Settings</i> option."
+msgstr ""
+"Đừng click đôi vào tập tin sau khi tải về; thay vào đó, hãy nhấn vào trình "
+"đơn Chrome (thường xuất hiện là ba đường ngang) ở góc trên bên phải. Sau đó,"
+" nhấn vào nút này. <i>Thiết lập</i> lựa chọn."
+
+# html/captive-portal/templates/provisioner/intune.html
+msgid "Download Android Agent"
+msgstr "Tải về"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+# html/captive-portal/templates/ssl_inspection/chrome.html
+# html/captive-portal/templates/ssl_inspection/firefox.html
+# html/captive-portal/templates/ssl_inspection/ios.html
+# html/captive-portal/templates/ssl_inspection/opera.html
+# html/captive-portal/templates/ssl_inspection/osx.html
+# html/captive-portal/templates/ssl_inspection/other.html
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Download Certificate"
+msgstr "Tải chứng thư số"
+
+# html/captive-portal/templates/provisioner/intune.html
+msgid "Download IOS Agent"
+msgstr "Tải về"
+
+# html/captive-portal/templates/provisioner/intune.html
+# html/captive-portal/templates/provisioner/sentinelone.html
+msgid "Download Mac OSX Agent"
+msgstr "Comment"
+
+# html/captive-portal/templates/provisioner/intune.html
+# html/captive-portal/templates/provisioner/sentinelone.html
+msgid "Download Windows Agent"
+msgstr "Tải về các điều chọn"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+# html/captive-portal/templates/ssl_inspection/chrome.html
+# html/captive-portal/templates/ssl_inspection/firefox.html
+# html/captive-portal/templates/ssl_inspection/ios.html
+# html/captive-portal/templates/ssl_inspection/opera.html
+# html/captive-portal/templates/ssl_inspection/osx.html
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Download the certificate to your device."
+msgstr "Tải chứng nhận về thiết bị của bạn"
+
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+msgid "E-mail"
+msgstr "Email"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+# html/captive-portal/templates/account.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+# pf::person::FIELDS
+msgid "Email"
+msgstr "Email"
+
+# html/captive-portal/templates/activation/email.html
+msgid "Email activation code has been verified. Access granted until : %s"
+msgstr "Mã kích hoạt thư điện tử đã được kiểm tra. Truy cập cho đến: %s"
+
+# /usr/local/pf/conf/authentication.conf.example email
+msgid "Email-based registration"
+msgstr "Đăng ký dựa trên email"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "Enter a valid telephone number"
+msgstr "Nhập một số điện thoại hợp lệ"
+
+# html/captive-portal/templates/security_events/bandwidth_expiration.html
+msgid "Expiration"
+msgstr "Hết hạn"
+
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+msgid "Expire"
+msgstr "Hạn sử dụng"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "Extend access duration"
+msgstr "Khoảng thời gian truy cập mở rộng"
+
+# html/captive-portal/templates/status.html
+msgid "Extend your access"
+msgstr "Mở rộng quyền truy cập"
+
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+msgid ""
+"Failure to do so within %s minutes will result in a termination of your "
+"network access."
+msgstr ""
+"Không làm được trong lòng. %s phút sẽ dẫn đến việc kết thúc truy cập mạng "
+"của bạn."
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid "Firefox CA trust prompt"
+msgstr "Nhắc tin tưởng Firefox CA"
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid ""
+"Firefox cannot get ssl updates from our servers. If you start having web "
+"page connection issues again, you will need to come back to this page and "
+"redo steps to get the newest certificate."
+msgstr ""
+"Firefox không thể lấy các bản cập nhật ssl từ máy phục vụ của chúng tôi. Nếu"
+" bạn bắt đầu có vấn đề kết nối trang Mạng một lần nữa, bạn sẽ cần phải trở "
+"lại trang này và các bước làm lại để có được chứng nhận mới nhất."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Firefox certificate installation"
+msgstr "Cài đặt chứng nhận Firefox"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+# pf::person::FIELDS
+msgid "Firstname"
+msgstr "Tên"
+
+# html/captive-portal/templates/status/login.html
+msgid "Forgot your password?"
+msgstr "Quên mật khẩu?"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+# pf::person::FIELDS
+msgid "Gender"
+msgstr "Giới tính"
+
+# html/captive-portal/templates/pki_provider/packetfence_local.html
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+# html/captive-portal/templates/pki_provider/scep.html
+msgid "Generate certificate"
+msgstr "Tạo chứng thư số"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Guest Sponsor Login"
+msgstr "Đăng nhập người bảo lãnh khách"
+
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+msgid "Guest access to the network was requested using this email address."
+msgstr "Khách truy cập mạng đã yêu cầu sử dụng địa chỉ thư này."
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "Guest request"
+msgstr "Yêu cầu của khách"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_guest_policy
+msgid "Guest signup"
+msgstr "Đăng ký khách"
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Has an active subscription"
+msgstr "Name"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+# html/captive-portal/templates/emails/emails-
+# billing_stripe_customer.subscription.deleted.html
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "Hello"
+msgstr "Xin chào"
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "Here is the device information"
+msgstr "Đây là thông tin về thiết bị"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "Here is the information the guest provided with registration form"
+msgstr "Đây là thông tin khách cung cấp với đơn đăng ký"
+
+# html/captive-portal/templates/provisioner/dpsk.html
+msgid "Here is your password to connect on the following SSID."
+msgstr "Dưới đây là mật khẩu của bạn để kết nối trên những điều sau SSID."
+
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+msgid "Here the new password updated for the Password Of the Day"
+msgstr "Ở đây mật khẩu mới được cập nhật cho mật khẩu của ngày"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Here, you will be asked whether to always trust Securly certificates. Click "
+"<i>Always Trust</i>."
+msgstr ""
+"Ở đây, bạn sẽ được hỏi có nên luôn tin tưởng các chứng nhận « scurly ». Nhấn"
+" vào <i>Luôn tin tưởng</i>."
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "Hostname"
+msgstr "Tên máy"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Widget/Field/AUP.pm
+msgid "I accept the terms"
+msgstr "Tôi chấp nhận điều kiện."
+
+# html/captive-portal/templates/sms/validate.html
+msgid "I don't have a PIN"
+msgstr "Tôi không có Song sắt."
+
+# lib/pf/web.pm
+msgid "IP"
+msgstr "IP"
+
+# html/captive-portal/templates/status/forgot_password_sent.html
+msgid ""
+"If an account exists with that username or email, you will receive a "
+"password reset link shortly."
+msgstr ""
+"Nếu một tài khoản tồn tại với tên người dùng hay thư điện tử đó, bạn sẽ nhận"
+" được một liên kết thiết lập lại mật khẩu trong thời gian ngắn."
+
+# html/captive-portal/templates/provisioner/mobileiron.html
+msgid "If you are using a Windows phone"
+msgstr "Nếu bạn đang dùng điện thoại Windows"
+
+# html/captive-portal/templates/provisioner/mobileiron.html
+msgid "If you are using an Android phone or tablet"
+msgstr "Nếu bạn đang sử dụng một điện thoại hoặc máy tính bảng"
+
+# html/captive-portal/templates/provisioner/mobileiron.html
+msgid "If you are using an Apple phone or tablet"
+msgstr "Nếu bạn đang sử dụng điện thoại hay máy tính bảng Apple"
+
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+msgid "If you did not request a password reset, please ignore this email."
+msgstr "Nếu bạn không yêu cầu đặt lại mật khẩu, hãy bỏ qua email này."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"If you did not see the prompts mentioned above you will need to manually "
+"<i>Trust</i> the newly installed certificate. Continue with the following "
+"steps."
+msgstr ""
+"Nếu bạn không nhìn thấy các dấu nhắc được đề cập ở trên, bạn sẽ cần phải thủ"
+" công <i>Tin tưởng</i> chứng nhận mới được cài đặt. Tiếp tục với những bước "
+"sau."
+
+# html/captive-portal/templates/ssl_inspection/other.html
+msgid ""
+"If you have a device that does not fall under one of the categories located "
+"on the page menus above, you will need to figure out how to install the "
+"certificate on your own device. We do not support any devices outside of the"
+" ones listed on the page menus. You may download our certificate below."
+msgstr ""
+"Nếu bạn có một thiết bị không rơi dưới một trong những phân loại nằm trong "
+"thực đơn trang ở trên, bạn cần phải tìm cách cài đặt chứng nhận này vào "
+"thiết bị riêng của bạn. Chúng tôi không hỗ trợ bất kỳ thiết bị nào bên ngoài"
+" những điều liệt kê trong trình đơn trang. Bạn có thể tải về chứng nhận bên "
+"dưới."
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid ""
+"If you have a passcode set, you may be required to enter it. If you don't "
+"have one set, you may be prompted to create one, depending on your device "
+"configuration."
+msgstr ""
+"Nếu bạn có một bộ mã, có thể cần thiết bạn nhập nó. Nếu bạn không có một "
+"tập, bạn có thể được nhắc tạo một bộ, phụ thuộc vào cấu hình thiết bị của "
+"bạn."
+
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+msgid ""
+"If you have any questions regarding the registration process please contact "
+"your local support staff."
+msgstr ""
+"Nếu bạn có thắc mắc gì liên quan đến tiến trình đăng ký, vui lòng liên lạc "
+"với nhân viên hỗ trợ địa phương."
+
+# html/captive-portal/templates/release.html
+# html/captive-portal/templates/scan-in-progress.html
+# html/captive-portal/templates/scan.html
+# html/captive-portal/templates/waiting.html
+msgid ""
+"If you have scripting turned off, you will not be automatically redirected. "
+"Please enable scripting or open a new browser window from time to time to "
+"see if your access was enabled."
+msgstr ""
+"Nếu bạn tắt văn lệnh, bạn sẽ không tự động chuyển hướng. Hãy bật khả năng "
+"soạn thảo hay mở một cửa sổ duyệt mới thỉnh thoảng để xem quyền truy cập của"
+" bạn đã bật hay chưa."
+
+# html/captive-portal/templates/pki_provider/packetfence_local.html
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+# html/captive-portal/templates/pki_provider/scep.html
+msgid ""
+"In order to complete the registration process, you need to generate your "
+"user certificate."
+msgstr ""
+"Để hoàn tất tiến trình đăng ký, bạn cần phải tạo chứng nhận người dùng."
+
+# html/captive-portal/templates/provisioner/windows.html
+msgid ""
+"In order to complete your connection to the secure SSID, you will need to "
+"run the agent available below."
+msgstr ""
+"Để hoàn tất kết nối của bạn với an toàn SSIDAnh sẽ cần phải kiểm tra đặc vụ "
+"bên dưới."
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid ""
+"In the Certificate Manager window click on the <i>Authorities</i> Tab and "
+"click on <i>Import</i>."
+msgstr ""
+"Trong cửa sổ quản lý chứng nhận nhấp chuột vào <i>Nhà cầm quyền</i> Thẻ và "
+"nhấp vào <i>Nhập</i>."
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid ""
+"In the Options page click <i>Advanced</i> on the lefthand side. Under "
+"Requests make sure <i>Select One automatically</i> is selected and click the"
+" button <i>View Certificates</i> at the bottom."
+msgstr ""
+"Trong trang tùy chọn, hãy nhắp vào <i>Cấp cao</i> Bên tay trái, bên dưới yêu"
+" cầu đảm bảo <i>Chọn một tự động</i> đã chọn và nhấn nút <i>Xem chứng "
+"nhận</i> Ở phía dưới."
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid ""
+"In your firefox browser click on the <i>menu</i> botton at the top right of "
+"your browser and select <i>Options</i>."
+msgstr ""
+"Trong trình duyệt Firefox của bạn nhấp chuột vào <i>trình đơn</i> botton ở "
+"góc phải trên cùng của trình duyệt và chọn <i>Tùy chọn</i>."
+
+# html/captive-portal/templates/provisioner/mobileiron.html
+# html/captive-portal/templates/provisioner/windows.html
+msgid "Install Agent"
+msgstr "Cài đặt Đặc vụ"
+
+# html/captive-portal/templates/provisioner/android.html
+# html/captive-portal/templates/provisioner/mobileconfig.html
+msgid "Install wireless profile"
+msgstr "Cài đặt hồ sơ không dây"
+
+# html/captive-portal/templates/provisioner/mobileconfig.html
+msgid "Install wireless profile anyway"
+msgstr "Vẫn cài đặt hồ sơ không dây"
+
+# html/captive-portal/templates/billing/index.html
+msgid "Internet Access Package"
+msgstr "Gói truy cập Mạng"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "KeychainAccess"
+msgstr "Name"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "KeychainAccess application"
+msgstr "Ứng dụng bàn phímName"
+
+# pf::person::FIELDS
+msgid "Lang"
+msgstr "Lang"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+# pf::person::FIELDS
+msgid "Lastname"
+msgstr "Họ"
+
+# /usr/local/pf/conf/authentication.conf.example file1
+msgid "Legacy Source"
+msgstr "Nguồn di sản"
+
+# /usr/local/pf/conf/authentication.conf.example local
+msgid "Local Users"
+msgstr "Người dùng cục bộ"
+
+# html/captive-portal/templates/activation/sponsor_login.html
+# html/captive-portal/templates/oauth2/landing.html
+# html/captive-portal/templates/saml.html
+# html/captive-portal/templates/status/login.html
+# html/captive-portal/templates/status/reset_password_token_success.html
+msgid "Login"
+msgstr "Đăng nhập"
+
+# html/captive-portal/templates/status/login.html
+msgid "Login to manage registered devices"
+msgstr "Đăng nhập vào các thiết bị đã đăng ký"
+
+# html/captive-portal/templates/networklogoff.html
+msgid "Logoff"
+msgstr "Đăng xuất"
+
+# html/captive-portal/templates/status.html
+# html/captive-portal/templates/status/menu.html
+msgid "Logout"
+msgstr "Đăng xuất"
+
+# html/captive-portal/templates/status.html
+# lib/pf/web.pm
+msgid "MAC"
+msgstr "MAC"
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "MAC Address"
+msgstr "MAC Địa chỉ"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_mfa_policy
+msgid "MFA policy"
+msgstr "Chính sách MFA"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Mac OSX certificate installation"
+msgstr "Name"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Make sure <i>System</i> is selected in the left column and then double click"
+" on your certificate."
+msgstr ""
+"Đảm bảo <i>Hệ thống</i> được chọn trong cột bên trái và sau đó nhấn đôi vào "
+"chứng nhận."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Make sure <i>Trust</i> is expanded and select the dropdown next to <i>When "
+"using this certificate:</i> and change it to <i>Always Trust</i>."
+msgstr ""
+"Đảm bảo <i>Tin tưởng</i> được mở rộng và chọn thả xuống kế bên <i>Khi dùng "
+"chứng nhận này:</i> và thay đổi thành <i>Luôn tin tưởng</i>."
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Manage"
+msgstr "Quản lý"
+
+# html/captive-portal/templates/max-nodes-reached.html
+msgid "Manage your devices"
+msgstr "Quản lý thiết bị của bạn"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "Mobile provider"
+msgstr "Nhà cung cấp di động"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/NetworkLogoff.pm
+msgid "Network Logoff"
+msgstr "Đăng xuất mạng"
+
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+msgid "Network access activation"
+msgstr "Cấu hình mạng"
+
+# html/captive-portal/templates/release.html
+# html/captive-portal/templates/scan-in-progress.html
+msgid "Network access has been granted"
+msgstr "Name"
+
+# html/captive-portal/templates/status.html
+msgid "Network subscriptions"
+msgstr "dài hạn mạng"
+
+# html/captive-portal/templates/status/reset_password_token.html
+msgid "New Password"
+msgstr "Mật khẩu mới"
+
+# lib/pf/pfcron/task/password_of_the_day.pm
+msgid "New password of the day"
+msgstr "Mật khẩu mới của ngày"
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid ""
+"Next, a dialogue will appear, asking if you would like to install the "
+"certificate authority. Click <i>Install</i>."
+msgstr ""
+"Kế tiếp, một hộp thoại sẽ xuất hiện, hỏi nếu bạn muốn cài đặt thẩm quyền "
+"chứng nhận. Nhấn vào <i>Cài đặt</i>."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Next, you might be prompted to enter in your login information to make the "
+"change. After entering your login information, click <i>Update Settings</i>."
+msgstr ""
+"Kế tiếp, bạn có thể được nhắc nhập vào thông tin đăng nhập để thay đổi. Sau "
+"khi nhập thông tin đăng nhập, nhấn vào <i>Thiết lập cập nhật</i>."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"Next, you will be presented with a <i>Certificate</i> dialogue. Click the "
+"<i>Install Certificate...</i> button near the bottom of this window."
+msgstr ""
+"Tiếp theo, bạn sẽ được trình bày với một <i>Chứng nhận</i> hộp thoại. Nhấn "
+"vào <i>Cài đặt chứng nhận...</i> Nút gần đáy cửa sổ này."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Next, you will be prompted to enter the user name and password you use to "
+"log on to the computer; do so, and click <i>Modify Keychain</i>."
+msgstr ""
+"Kế tiếp, bạn sẽ được nhắc để nhập tên người dùng và mật khẩu bạn dùng để "
+"đăng nhập vào máy tính; hãy làm như vậy, rồi nhấn vào <i>Sửa đổi móc "
+"khóa</i>."
+
+# pf::person::FIELDS
+msgid "Nickname"
+msgstr "Biệt danh"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "No active sponsor source for this Connection Profile."
+msgstr "Không có nguồn tài trợ cho hồ sơ kết nối này."
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "No active subscription"
+msgstr "Không có đăng ký chủ động"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Node/Manager.pm
+msgid "Not allowed to deregister %s"
+msgstr "Không được phép sơ tán %s"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Node/Manager.pm
+msgid "Not logged in or node ID %s is not known"
+msgstr "Không đăng nhập hay nhận dạng nút %s không biết"
+
+# pf::person::FIELDS
+msgid "Notes"
+msgstr "Ghi chú"
+
+# /usr/local/pf/conf/authentication.conf.example null
+msgid "Null Source"
+msgstr "Nguồn hạt"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_oauth_policy
+msgid "OAuth login"
+msgstr "Đăng nhập OAuth"
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "OS"
+msgstr "hệ điều hành"
+
+# html/captive-portal/templates/status.html
+msgid "OS Type "
+msgstr "Kiểu hệ điều hành "
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "OS X Downloads icon"
+msgstr "Biểu tượng X X tải về"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "OS X Keychain Access prompt"
+msgstr "Dấu nhắc truy cập hệ thống phím XName"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "OS X password prompt"
+msgstr "Dấu nhắc mật khẩu hệ điều hành X"
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid ""
+"On the next windows make sure to checkmark that all options and click "
+"<i>OK</i>."
+msgstr ""
+"Trên cửa sổ kế tiếp, hãy kiểm tra xem mọi tùy chọn đều có dấu và nhắp vào "
+"<i>Được rồi</i>."
+
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+msgid ""
+"Once on site, select guest access on the captive portal and use the "
+"following username and password to authenticate"
+msgstr ""
+"Một khi vào trang web, hãy chọn truy cập khách truy cập trên cổng bị giam "
+"cầm và sử dụng những tên người dùng sau đây và mật khẩu để xác thực quyền"
+
+# html/captive-portal/templates/provisioner/airwatch.html
+# html/captive-portal/templates/provisioner/intune.html
+# html/captive-portal/templates/provisioner/jamf.html
+# html/captive-portal/templates/provisioner/jamfCloud.html
+# html/captive-portal/templates/provisioner/kandji.html
+# html/captive-portal/templates/provisioner/sentinelone.html
+msgid ""
+"Once the application is installed, click 'Continue' to activate your network"
+" connection"
+msgstr ""
+"Một khi ứng dụng được cài đặt, hãy nhấn 'Tiếp tục' để kích hoạt kết nối mạng"
+" của bạn"
+
+# html/captive-portal/templates/provisioner/mobileiron.html
+msgid ""
+"Once the application is installed, click Continue to activate your network "
+"connection"
+msgstr ""
+"Một khi ứng dụng được cài đặt, hãy nhắp vào Tiếp tục kích hoạt kết nối mạng "
+"của bạn."
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid ""
+"Once you click on the activation link the guest will be sent a username and "
+"password by email which will allow him to register as a guest in the network"
+" once on-site."
+msgstr ""
+"Một khi bạn nhắp vào liên kết kích hoạt khách, sẽ gửi một tên người dùng và "
+"mật khẩu bằng email mà cho phép người đó đăng ký làm khách trong mạng một "
+"lần vào đúng địa điểm."
+
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+msgid ""
+"Once you have activated you will receive a username and password to use once"
+" you'll be on-site."
+msgstr ""
+"Một khi bạn đã kích hoạt, bạn sẽ nhận tên người dùng và mật khẩu để sử dụng "
+"một khi bạn sẽ được bật."
+
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+msgid ""
+"Once you will be on-site, authenticate using the following credentials to "
+"our captive portal"
+msgstr ""
+"Một khi bạn sẽ được ở-site, xác thực sử dụng các giấy ủy nhiệm sau đây cho "
+"cổng bị giam cầm của chúng tôi"
+
+# html/captive-portal/templates/status/reset_password.html
+msgid "One of the password fields hasn't been filled"
+msgstr "Một trong những trường mật khẩu chưa được điền"
+
+# html/captive-portal/templates/mfa/TOTP.html
+msgid ""
+"Open the two-factor authentication app on your device to view your "
+"authentication code and verify your identity."
+msgstr ""
+"Mở ứng dụng xác thực hai mặt trên thiết bị của bạn để xem mã xác thực của "
+"bạn và kiểm tra danh tính của bạn."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Open up Keychain Access (<i>Finder > Applications > Utilities > Keychain "
+"Access</i>)."
+msgstr ""
+"Mở cửa sổ truy cập Keychin (<i>Tìm kiếm > Ứng dụng > tiện ích > Truy cập "
+"Keychain</i>)."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"Opening the file will launch the Keychain Access application; here, you "
+"maybe asked whether to add the certifitcate to the login keychain or the "
+"System keychain. It is preferred if the certificate is added to the System "
+"keychain in-case there are other users who might potentially login. Then "
+"click <i>Add</i>."
+msgstr ""
+"Mở tập tin sẽ chạy ứng dụng Keychain Truy cập Keychain; ở đây, bạn có lẽ hỏi"
+" thêm có nên thêm chứng nhận certifitate vàochain đăng nhập hay tổ hợp "
+"phímchain hệ thống không. Nó được ưu tiên nếu chứng nhận được thêm vào tổ "
+"hợp phím « Hệ thống » có những người dùng khác có khả năng đăng nhập. Sau đó"
+" nhấn vào nút « <i>Thêm</i>."
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid "Opera CA install prompt"
+msgstr "Nhắc cài đặt CA Opera"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Opera certificate installation"
+msgstr "Cài đặt chứng nhận Opera"
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid "Opera issuer trust prompt"
+msgstr "Nhắc nhở tín nhiệm nhà hát"
+
+# html/captive-portal/templates/ssl_inspection/menu.html
+msgid "Other"
+msgstr "Khác"
+
+# pf::person::FIELDS
+msgid "Otp"
+msgstr "Otp"
+
+# html/captive-portal/templates/sms/validate.html
+msgid "PIN"
+msgstr "PIN"
+
+# html/captive-portal/templates/layout.html
+msgid "PacketFence Registration system"
+msgstr "Hệ thống đăng ký truy cập NAC20"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+# html/captive-portal/templates/account.html
+# html/captive-portal/templates/activation/sponsor_login.html
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+# html/captive-portal/templates/pki_provider/packetfence_local.html
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+# html/captive-portal/templates/pki_provider/scep.html
+# html/captive-portal/templates/status/login.html
+# html/captive-portal/templates/status/reset_password.html
+msgid "Password"
+msgstr "Mật khẩu"
+
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+msgid "Password Of the Day"
+msgstr "Mật khẩu ngày"
+
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+msgid "Password Reset Request"
+msgstr "Đặt lại mật khẩu yêu cầu"
+
+# html/captive-portal/templates/provisioner/dpsk.html
+msgid "Password: "
+msgstr "Mật khẩu: "
+
+# html/captive-portal/templates/billing/confirm_Stripe.html
+msgid "Pay"
+msgstr "Trả tiền"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_billing_policy
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/Billing.pm
+msgid "Pay for your access"
+msgstr "Trả tiền cho quyền truy cập của bạn"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "Phone number"
+msgstr "Số điện thoại"
+
+# pf::person::FIELDS
+msgid "Pid"
+msgstr "Pid"
+
+# html/captive-portal/templates/ssl_inspection/other.html
+msgid ""
+"Please <u>check back periodically</u> on this webpage for new and updated "
+"browser certificates for your unsupported device. These browser certificates"
+" will help allow full device functionality with our network."
+msgstr ""
+"Làm ơn <u>Kiểm tra lại thường xuyên</u> trên trang Mạng này cho phép chứng "
+"nhận duyệt mới và mới cập nhật cho thiết bị chưa được hỗ trợ của bạn. Những "
+"chứng nhận duyệt này sẽ giúp cho phép khả năng hoạt động đầy đủ thiết bị với"
+" mạng của chúng tôi."
+
+# html/captive-portal/templates/status/billing_cancel_subscription.html
+msgid ""
+"Please click the button below to confirm the cancelation of your "
+"subscription."
+msgstr "Vui lòng nhắp vào cái nút bên dưới để xác nhận hủy đăng ký."
+
+# html/captive-portal/templates/status/reset_password_token.html
+msgid "Please fill in all fields"
+msgstr "Xin hãy điền vào tất cả các lĩnh vực"
+
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+msgid "Please ignore this request if you have not requested network access."
+msgstr "Hãy bỏ qua yêu cầu này nếu bạn không yêu cầu truy cập mạng."
+
+# html/captive-portal/templates/ssl_inspection.html
+msgid "Please install the certificate."
+msgstr "Xin hãy cài đặt chứng nhận."
+
+# html/captive-portal/templates/mfa/TOTP.html
+msgid "Please scan the code below in your favorite authenticator app"
+msgstr "Vui lòng quét mã dưới đây trong ứng dụng xác thực yêu thích của bạn"
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Please select the account you would like to manage"
+msgstr "Hãy chọn tài khoản bạn muốn quản lý"
+
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+msgid "Policy ID"
+msgstr "ID chính sách"
+
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+msgid "Policy name"
+msgstr "Chính sách"
+
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+msgid "Policy query"
+msgstr "Hỏi chính sách"
+
+# pf::person::FIELDS
+msgid "Portal"
+msgstr "Cổng"
+
+# pf::person::FIELDS
+msgid "Potd"
+msgstr "Name"
+
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+msgid "PreRegister confirmation"
+msgstr "Xác nhận tiền gửi"
+
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+msgid "PreRegistration"
+msgstr "Định sẵn"
+
+# html/captive-portal/templates/billing/tier.html
+msgid "Price"
+msgstr "Giá"
+
+# pf::person::FIELDS
+msgid "Psk"
+msgstr "Psk"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_blackhole_policy
+msgid "Refuse Login"
+msgstr "Từ chối đăng nhập"
+
+# html/captive-portal/templates/device-registration/registration.html
+msgid "Register"
+msgstr "Đăng ký"
+
+# html/captive-portal/templates/status.html
+msgid "Register another device"
+msgstr "Đăng ký một thiết bị khác"
+
+# html/captive-portal/templates/status.html
+msgid "Registered on"
+msgstr "Đã đăng ký"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/DeviceRegistration.pm
+msgid "Registration"
+msgstr "Đăng ký"
+
+# html/captive-portal/templates/waiting.html
+msgid "Registration pending"
+msgstr "Đang đợi đăng ký"
+
+# html/captive-portal/templates/status/reset_password_token_invalid.html
+msgid "Request a new link"
+msgstr "Yêu cầu một liên kết mới"
+
+# html/captive-portal/templates/sms/validate.html
+msgid "Resend PIN"
+msgstr "Giao diện PIN"
+
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+# html/captive-portal/templates/status/reset_password_token.html
+msgid "Reset Password"
+msgstr "Đặt lại mật khẩu"
+
+# html/captive-portal/templates/status/forgot_password.html
+msgid "Reset your password"
+msgstr "Đặt lại mật khẩu"
+
+# html/captive-portal/templates/max-nodes-reached.html
+msgid "Retry signup"
+msgstr "Thử lại đăng ký"
+
+# html/captive-portal/templates/status/menu.html
+msgid "Return to device list"
+msgstr "Trở lại danh sách thiết bị"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Root.pm
+msgid "Role %s has been assigned to your device"
+msgstr "Nhiệm vụ %s đã được gán cho thiết bị của bạn"
+
+# pf::person::FIELDS
+msgid "Room_number"
+msgstr "Phòng_ con số"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/SAML.pm
+msgid "SAML authentication"
+msgstr "Xác thực SAML"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_saml_policy
+msgid "SAML login"
+msgstr "Đăng nhập SAML"
+
+# /usr/local/pf/conf/authentication.conf.example sms
+msgid "SMS-based registration"
+msgstr "Đăng ký dựa trên tin nhắn"
+
+# html/captive-portal/templates/provisioner/dpsk.html
+msgid "SSID: "
+msgstr "SSID: "
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "Security Event %s was detected on your device."
+msgstr "Sự kiện bảo mật %s được phát hiện trên thiết bị của anh."
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "Security Event detected !"
+msgstr "Phát hiện sự kiện an ninh!"
+
+# html/captive-portal/templates/device-registration/registration.html
+msgid "Select Console"
+msgstr "Chọn bàn điều khiển"
+
+# html/captive-portal/templates/activation/sponsor_set_access_durations.html
+msgid "Select access duration"
+msgstr "Chọn khoảng thời gian truy cập"
+
+# html/captive-portal/templates/content-with-choice.html
+msgid "Select an authentication method"
+msgstr "Chọn phương pháp xác thực"
+
+# html/captive-portal/templates/device-registration/registration.html
+msgid "Select registration role"
+msgstr "Chọn vai trò đăng ký"
+
+# html/captive-portal/templates/status/forgot_password.html
+msgid "Send Reset Link"
+msgstr "Gửi liên kết đặt lại"
+
+# html/captive-portal/templates/status/reset_password_token.html
+msgid "Set your new password"
+msgstr "Đặt mật khẩu mới của bạn"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_show_local_account
+msgid "Show local account"
+msgstr "Hiện tài khoản cục bộ"
+
+# pf::person::FIELDS
+msgid "Source"
+msgstr "Nguồn"
+
+# pf::person::FIELDS
+msgid "Sponsor"
+msgstr "Nhà tài trợ"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "Sponsor Email"
+msgstr "Bộ quản lý tài liệu"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Sponsor request accepted"
+msgstr "Yêu cầu tài trợ được chấp nhận"
+
+# /usr/local/pf/conf/authentication.conf.example sponsor
+msgid "Sponsor-based registration"
+msgstr "Đăng ký dựa trên các tài khoản"
+
+# pf::person::FIELDS
+msgid "Sponsored_date"
+msgstr "Đã tài trợ_ngày"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Status"
+msgstr "Trạng thái"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Status.pm
+msgid "Status - Forgot Password"
+msgstr "Trạng thái - Mật khẩu đã quên"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Status.pm
+msgid "Status - Login"
+msgstr "Trạng thái - Đăng nhậpStencils"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Status.pm
+msgid "Status - Manage Account"
+msgstr "Trạng thái - Tài khoản Quản lýStencils"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Status.pm
+msgid "Status - Network Access"
+msgstr "Trạng thái - Truy cập mạngStencils"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Status.pm
+msgid "Status - Reset Password"
+msgstr "Trạng thái - Đặt lại mật khẩu"
+
+# html/captive-portal/templates/ssl_inspection/android.html
+# html/captive-portal/templates/ssl_inspection/chrome.html
+# html/captive-portal/templates/ssl_inspection/firefox.html
+# html/captive-portal/templates/ssl_inspection/ios.html
+# html/captive-portal/templates/ssl_inspection/opera.html
+# html/captive-portal/templates/ssl_inspection/osx.html
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Step"
+msgstr "Step"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/StripeCustomerPortal.pm
+msgid ""
+"Stripe Customer Portal is not enabled on the Stripe sources of this "
+"connection profile"
+msgstr "Không hiệu lực cổng tự chọn trên các nguồn của hồ sơ kết nối này."
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Stripe accounts for %s"
+msgstr "Thoát tài khoản cho %s"
+
+# html/captive-portal/templates/stripe-customer-portal/select-account.html
+msgid "Subscribed on device"
+msgstr "Ghi đè lên thiết bị"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+# pf::person::FIELDS
+msgid "Telephone"
+msgstr "Điện thoại"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "Telephone number is not valid"
+msgstr "Số điện thoại không hợp lệ"
+
+# html/captive-portal/templates/ssl_inspection/common.html
+msgid "Test Certificate"
+msgstr "Chứng nhận thử"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "Thank you for your cooperation."
+msgstr "Cảm ơn vì sự hợp tác của anh."
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "Thank you for your purchase."
+msgstr "Cảm ơn vì đã mua."
+
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+msgid "Thank you for your understanding"
+msgstr "Cảm ơn vì sự thông cảm của anh."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"The <i>Certificate Import Wizard</i> will open next. Depending on your "
+"configuration, you may be asked whether to install for the <i>Current "
+"User</i> or the <i>Local Machine</i>; if asked, you should normally select "
+"<i>Local Machine</i>. In either case, click <i>Next</i>."
+msgstr ""
+"Hạt <i>Trợ lý Nhập chứng nhận</i> sẽ mở kế tiếp. Tùy thuộc vào cấu hình của "
+"bạn, bạn có thể được hỏi có nên cài đặt cho phiên chạy này không. <i>Người "
+"dùng hiện thời</i> hoặc <i>Máy cục bộ</i>; nếu được hỏi, bạn nên thường "
+"xuyên chọn <i>Máy cục bộ</i>Trong cả hai trường hợp, click <i>Tiếp theo</i>."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"The <i>Select Certificate Store</i> dialogue will open. Highlight <i>Trusted"
+" Root Certification Authorities</i> in the list, and then press <i>OK</i> at"
+" the bottom."
+msgstr ""
+"Hạt <i>Chọn Lưu chứng nhận</i> Hộp thoại sẽ mở. Tô sáng <i>Các nhà cầm quyền"
+" chứng thực căn bản</i> trong danh sách, và sau đó nhấn <i>Được rồi</i> Ở "
+"phía dưới."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"The Chrome Settings page will open in a new tab. If necessary, scroll all "
+"the way down to the bottom; then, click the <i>Show advanced settings</i> "
+"link."
+msgstr ""
+"Trang thiết lập máy ảnh sẽ mở trong một thẻ mới. Nếu cần thiết, hãy cuộn hết"
+" đường xuống dưới, rồi nhấn vào <i>Hiển thị thiết lập nâng cao</i> liên kết."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"The Settings page will expand to reveal several new options. Scroll down "
+"nearly to the bottom and click the <i>Manage certificates...</i> button."
+msgstr ""
+"Trang thiết lập sẽ mở rộng để hiển thị vài tùy chọn mới. Cuộn xuống gần đáy "
+"và nhấn vào <i>Quản lý chứng nhận...</i> Nút."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid ""
+"The activation code provided is invalid. Reasons could be: it never existed,"
+" it was already used or has expired."
+msgstr ""
+"Mã kích hoạt không hợp lệ. Lý do có thể là: nó chưa bao giờ tồn tại, nó đã "
+"được sử dụng hoặc đã hết hạn."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "The activation code provided is not valid for this page."
+msgstr "Mã kích hoạt không hợp lệ cho trang này."
+
+# html/captive-portal/templates/status.html
+msgid ""
+"The device %s will be disconnected and won't be able to be registered again."
+msgstr "Thiết bị %s sẽ bị ngắt kết nối và sẽ không thể đăng ký lại được."
+
+# html/captive-portal/templates/emails/emails-
+# billing_stripe_customer.subscription.deleted.html
+msgid "The network access of device %s has been revoked."
+msgstr "Truy cập mạng của thiết bị %s đã bị thu hồi."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"The next screen will ask whether you would like to have Windows "
+"<i>automatically select a certificate store</i> or you would like to select "
+"it yourself. Opt to select yourself, by clicking on <i>Place all "
+"certificates in the following store</i>. Then, press the <i>Browse</i> "
+"button to the right."
+msgstr ""
+"Màn hình tiếp theo sẽ hỏi liệu bạn có muốn có cửa sổ không <i>Tự động chọn "
+"một cửa hàng chứng nhận</i> hoặc bạn muốn tự chọn nó. <i>Đặt mọi chứng nhận "
+"trong cửa hàng kế</i>Rồi ấn vào <i>Duyệt</i> Nút bên phải."
+
+# html/captive-portal/templates/readonly.html
+msgid "The system is in maintenance mode"
+msgstr "Hệ thống này là trong chế độ bảo trì"
+
+# html/captive-portal/templates/status/reset_password.html
+# html/captive-portal/templates/status/reset_password_token.html
+msgid "The two entered passwords did not match"
+msgstr "Hai mật khẩu đã nhập không khớp"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"These images show Chrome running on Chrome OS version 47; you may not see "
+"exactly the same thing if you are using Chrome for Linux; however, the "
+"general process and wording should be the same."
+msgstr ""
+"Những hình ảnh này cho thấy Chrome đang chạy trên phiên bản 47 của hệ điều "
+"hành hệ thống hệ thống hệ thống hệ thống hệ thống hệ thống định vị; bạn có "
+"thể không thấy chính xác điều tương tự nếu bạn đang sử dụng Chrome cho "
+"Linux; tuy nhiên, quá trình tổng quát và từ ngữ nên giống nhau."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"These images show Internet Explorer 10 running on Windows 8; you may not see"
+" exactly the same thing if you are using another browser or a different "
+"version of Windows; however, the general process and wording should be the "
+"same."
+msgstr ""
+"Những hình ảnh này hiển thị Internet Explorer 10 chạy trên Windows 8; bạn có"
+" thể không thấy chính xác điều tương tự nếu bạn đang sử dụng một trình duyệt"
+" khác hoặc một phiên bản khác của Windows; tuy nhiên, quá trình tổng quát và"
+" từ ngữ nên giống nhau."
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid ""
+"These images show Opera on macOS. If your computer runs Windows or Linux, "
+"the buttons may look different - but the words should be the same."
+msgstr ""
+"Những hình ảnh này hiển thị Opera trên MacOS. Nếu máy tính chạy Windows hay "
+"Linux, các nút có thể trông khác nhau, nhưng các từ nên giống nhau."
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid ""
+"These images show iOS 9 running on an iPad; if you have a different version "
+"of iOS, the layout and buttons may be different — but the words should be "
+"the same.) Also, you maybe presented with a warning about the unverified "
+"authenticity of the profile. You may read over this if you like; otherwise, "
+"tap <i>Install</i> again (in the top-right corner."
+msgstr ""
+"Những hình ảnh này hiển thị iOS 9 chạy trên iPad; nếu bạn có một phiên bản "
+"iOS khác nhau, bố trí và nút có thể khác nhau — nhưng các từ nên giống "
+"nhau.) Cũng có thể, bạn có thể được cảnh báo về tính xác thực không được sửa"
+" đổi của hồ sơ. Bạn có thể đọc nó nếu bạn thích; nếu không, gõ. <i>Cài "
+"đặt</i> Một lần nữa (ở góc phải trên cùng."
+
+# html/captive-portal/templates/account.html
+msgid "This account can only be used once."
+msgstr "Tài khoản này chỉ có thể dùng một lần."
+
+# html/captive-portal/templates/status/billing_cancel_subscription.html
+msgid "This action cannot be undone."
+msgstr "Không thể làm lại hành động này."
+
+# html/captive-portal/templates/status.html
+msgid "This device is declared as lost or stolen."
+msgstr "Thiết bị này được tuyên bố là bị mất hoặc bị đánh cắp."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/NetworkLogoff.pm
+msgid ""
+"This feature cannot be accessed because the system is not able to find your "
+"MAC address. Please contact your network administrator for more details."
+msgstr ""
+"Không thể truy cập tính năng này vì hệ thống không tìm thấy bạn MAC địa chỉ."
+" Vui lòng liên lạc với quản trị mạng để biết thêm chi tiết."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/NetworkLogoff.pm
+msgid ""
+"This feature is currently disabled. Please contact your network "
+"administrator for more details."
+msgstr ""
+"Chức năng này hiện bị tắt. Xin hãy liên lạc với quản trị mạng để biết thêm "
+"chi tiết."
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid ""
+"This guide is for Opera version 12 and below. Newer versions of Opera will "
+"use your computer system's certificate or keychain manager instead of your "
+"browser's local certificate manager. If you have Opera version 15 or above, "
+"please download either the <a href=\"../ssl_inspection/osx\">macOS</a> or <a"
+" href=\"../ssl_inspection/windows\">Windows</a> based certificate, or any of"
+" the other platforms, depending on your system."
+msgstr ""
+"Hướng dẫn này cho Opera phiên bản 12 và dưới đây. Phiên bản Opera mới hơn sẽ"
+" sử dụng chứng nhận hệ thống máy tính của bạn hoặc bộ quản lý mã khóa thay "
+"cho bộ quản lý chứng nhận cục bộ của trình duyệt. Nếu bạn có phiên bản Opera"
+" phiên bản 15 hoặc trên, xin hãy tải xuống. <a "
+"href=\"../ssl_inspection/osx\">MacOS</a> hay <a "
+"href=\"../ssl_inspection/windows\">Cửa sổ</a> Chứng nhận nền tảng, hay bất "
+"kỳ nền tảng khác, phụ thuộc vào hệ thống của bạn."
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for Android-"
+"based mobile devices, including the Nexus, Galaxy, Droid, and Evo, as well "
+"as several other phones and tablets. This guide is not primarily for "
+"district owned Android devices."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Đang lọc chứng nhận cho thiết bị "
+"di động gốc An- nexus, Ngân hà, Draid, và Evo, cũng như nhiều điện thoại và "
+"máy tính bảng khác. Hướng dẫn này không chủ yếu cho thiết bị anfat cục bộ."
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for Apple "
+"mobile devices, including the iPad, iPhone, and iPod touch. This guide is "
+"<i>not</i> primarily for district owned iPads."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Đang lọc chứng nhận cho thiết bị "
+"di động Apple, bao gồm cả iPad, iPhone và iPod. <i>không phải</i> Chủ yếu là"
+" cho các địa hạt sở hữu iPads."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for Chrome OS"
+" and Chrome for Linux — this also includes Chrome-based browsers which do "
+"not use the operating system's built-in key store."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Chứng nhận lọc cho hệ điều hành "
+"Chrome và Chrome cho Linux — cũng bao gồm các trình duyệt dựa trên CNhome mà"
+" không sử dụng cửa hàng chìa khóa được xây dựng sẵn của hệ điều hành."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for Windows-"
+"based browsers which use the operating system's built-in certificate store —"
+" this includes Internet Explorer, Chrome, and Safari."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Đang lọc chứng nhận cho các trình "
+"duyệt dựa trên Windows sử dụng cửa hàng chứng nhận có sẵn của hệ điều hành —"
+" bao gồm Internet Explorer, Chrome, và Safari."
+
+# html/captive-portal/templates/ssl_inspection/firefox.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for browsers "
+"based on the Mozilla platform, such as Firefox."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Đang lọc chứng nhận cho trình "
+"duyệt dựa trên nền Mozilla, chẳng hạn như Firefox."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for browsers "
+"which use macOS built-in Keychain facility — this includes Safari and "
+"Chrome. This guide is not primarily for district owned macOS computers."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Chứng nhận lọc cho trình duyệt sử "
+"dụng cơ sở keychain có sẵn macOS — bao gồm Safari và Chrome. Bản hướng dẫn "
+"này không phải chủ yếu cho máy tính kiểu McOS."
+
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid ""
+"This guide will help you install the SSL filtering certificate for the Opera"
+" browser."
+msgstr ""
+"Hướng dẫn này sẽ giúp bạn cài đặt các SSL Đang lọc chứng nhận cho trình "
+"duyệt Opera."
+
+# html/captive-portal/templates/status.html
+msgid "This is your current device."
+msgstr "Đây là thiết bị hiện tại của anh."
+
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+msgid "This link will expire in %s minutes."
+msgstr "Liên kết này sẽ hết hạn vào %s phút."
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+# html/captive-portal/templates/emails/emails-
+# billing_stripe_customer.subscription.deleted.html
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+# html/captive-portal/templates/emails/emails-guest_email_activation.html
+# html/captive-portal/templates/emails/emails-guest_email_preregistration.html
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+# html/captive-portal/templates/emails/emails-guest_password_reset.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+# html/captive-portal/templates/emails/emails-guest_sponsor_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid ""
+"This message was sent automatically from an unmonitored email address, "
+"please do not reply."
+msgstr ""
+"Thông điệp này đã được gửi tự động từ địa chỉ thư điện tử chưa trả lời, xin "
+"đừng trả lời."
+
+# html/captive-portal/templates/ssl_inspection/android.html
+# html/captive-portal/templates/ssl_inspection/chrome.html
+# html/captive-portal/templates/ssl_inspection/firefox.html
+# html/captive-portal/templates/ssl_inspection/ios.html
+# html/captive-portal/templates/ssl_inspection/opera.html
+# html/captive-portal/templates/ssl_inspection/osx.html
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"This network employs a technology called captive portal which allows the "
+"administrator(s) to restrict network access to trusted users. In order to "
+"prevent certificate security warnings when accessing this portal, the "
+"network's filtering unit must issue to your computer or mobile device a file"
+" called an SSL certificate."
+msgstr ""
+"Mạng này sử dụng một cổng đăng ký truy cập mà cho phép nhà quản trị hạn chế "
+"truy cập mạng cho người dùng tin cậy. Để ngăn chặn cảnh báo bảo mật chứng "
+"nhận khi truy cập cổng này, đơn vị lọc mạng phải cung cấp thông tin cho máy "
+"tính hay thiết bị di động của bạn một tập tin được gọi là SSL giấy chứng "
+"nhận."
+
+# html/captive-portal/templates/status/reset_password_token_invalid.html
+msgid "This password reset link is invalid or has expired."
+msgstr "Liên kết thiết lập lại mật khẩu này không hợp lệ hoặc đã hết hạn."
+
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+msgid "This username and password will be valid starting"
+msgstr "Tên người dùng và mật khẩu này sẽ bắt đầu hợp lệ"
+
+# html/captive-portal/templates/billing/tier.html
+msgid "Tier"
+msgstr "Tier"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/Billing.pm
+msgid "Tier confirmation"
+msgstr "Xác nhận bộ nhắc nhở"
+
+# html/captive-portal/templates/status.html
+msgid "Time balance "
+msgstr "Cân bằng thời gian "
+
+# pf::person::FIELDS
+msgid "Title"
+msgstr "Tựa"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "To cancel your subscription, click on the following link"
+msgstr "Để hủy bỏ đăng ký, hãy nhắp vào liên kết sau"
+
+# html/captive-portal/templates/provisioner/mobileiron.html
+msgid "To complete your network activation you need to install MobileIron"
+msgstr "Để hoàn thành việc kích hoạt mạng, bạn cần phải cài đặt MobileIron"
+
+# html/captive-portal/templates/provisioner/airwatch.html
+msgid ""
+"To complete your network activation you need to install the Airwatch agent."
+msgstr ""
+"Để hoàn thành việc kích hoạt mạng lưới, bạn cần cài đặt đặc vụ Airwatch."
+
+# html/captive-portal/templates/provisioner/intune.html
+msgid ""
+"To complete your network activation you need to install the Intune client."
+msgstr ""
+"Để hoàn thành việc kích hoạt mạng, bạn cần cài đặt ứng dụng khách ltune."
+
+# html/captive-portal/templates/provisioner/jamf.html
+# html/captive-portal/templates/provisioner/jamfCloud.html
+msgid ""
+"To complete your network activation you need to install the JAMF client."
+msgstr ""
+"Để hoàn thành việc kích hoạt mạng, bạn cần cài đặt ứng dụng khách JCF."
+
+# html/captive-portal/templates/provisioner/kandji.html
+msgid ""
+"To complete your network activation you need to install the Kandji MDM "
+"client."
+msgstr ""
+"Để hoàn thành việc kích hoạt mạng, bạn cần cài đặt ứng dụng khách Kandji "
+"MDM."
+
+# html/captive-portal/templates/provisioner/sentinelone.html
+msgid ""
+"To complete your network activation you need to install the SentinelOne "
+"client."
+msgstr ""
+"Để hoàn thành việc kích hoạt mạng lưới, bạn cần cài đặt ứng dụng khách "
+"Sentinel One."
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "To extend your network access, please visit"
+msgstr "Để mở rộng truy cập mạng của bạn, xin truy cập"
+
+# html/captive-portal/templates/provisioner/accept.html
+msgid ""
+"To the administrator : you should probably file a bug report on the "
+"PacketFence website"
+msgstr "Tới nhà quản trị: bạn có lẽ nên báo cáo lỗi về NAC20 Nơi Mạng"
+
+# html/captive-portal/templates/provisioner/accept.html
+msgid "To the user : try clicking Continue to see if it fixes the problem"
+msgstr "Người dùng: thử nhắp vào Tiếp tục để xem nó có sửa lỗi không"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "To view your current network status, please visit"
+msgstr "Để xem trạng thái mạng hiện thời, vui lòng thăm"
+
+# html/captive-portal/templates/emails/emails-billing_confirmation.html
+msgid "Transaction ID"
+msgstr "ID giao tiếp"
+
+# html/captive-portal/templates/billing/tier.html
+msgid "Transaction summary"
+msgstr "Tóm tắt thao tác"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/StripeCustomerPortal.pm
+msgid "Trying to manage a customer ID that doesn't belong to this account."
+msgstr ""
+"Cố gắng quản lý một chứng minh thư khách hàng không thuộc về tài khoản này."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/StripeCustomerPortal.pm
+msgid "Unable to create Stripe Customer Portal session"
+msgstr "Không thể tạo cửa tự chọn dải"
+
+# html/captive-portal/templates/release.html
+# html/captive-portal/templates/scan-in-progress.html
+msgid ""
+"Unable to detect network connectivity. Try restarting your web browser or "
+"opening a new tab to see if your access has been succesfully enabled."
+msgstr ""
+"Không thể phát hiện sự kết nối mạng. Hãy thử khởi chạy lại trình duyệt web "
+"của bạn, hoặc mở một trang web mới để xem quyền truy cập của bạn đã được bật"
+" không."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/StripeCustomerPortal.pm
+msgid "Unable to find a Stripe source in this connection profile"
+msgstr "Không thể tìm thấy một nguồn sọc trong hồ sơ kết nối này."
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "Unable to register the device: %s"
+msgstr "Không thể đăng ký thiết bị: %s"
+
+# html/captive-portal/templates/status.html
+msgid "Unregister"
+msgstr "Hủy đăng ký"
+
+# html/captive-portal/templates/status.html
+msgid ""
+"Unregister %s? The device will be immediately disconnected from the network."
+msgstr ""
+"Không đăng ký %sThiết bị sẽ được ngắt kết nối ngay lập tức với mạng lưới."
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid ""
+"Until you click on the activation link this guest will have NO Internet "
+"access."
+msgstr ""
+"Cho đến khi bạn nhấn vào liên kết kích hoạt khách mời này sẽ không có quyền "
+"truy cập Internet."
+
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+msgid "User Account"
+msgstr "Tài khoản người dùng"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+# html/captive-portal/templates/account.html
+# html/captive-portal/templates/activation/sponsor_login.html
+# html/captive-portal/templates/emails/emails-guest_admin_pregistration.html
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+# html/captive-portal/templates/emails/emails-guest_password_of_the_day.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+# html/captive-portal/templates/status/login.html
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+# html/captive-portal/templates/status/forgot_password.html
+msgid "Username or Email"
+msgstr "Tên người dùng hay thư điện tử"
+
+# /usr/local/pf/conf/portal_modules.conf.defaults default_login_policy
+msgid "Username/password login"
+msgstr "Đăng nhập tên người dùng/ nhập mật khẩu"
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "Utilities folder from the Finder"
+msgstr "Thư mục tiện ích từ bộ tìm"
+
+# html/captive-portal/templates/activation/sponsor_set_access_durations.html
+msgid "Validate"
+msgstr "Kiểm tra"
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"When the <i>Certificate manager</i> screen appears, click the "
+"<i>Authorities</i> tab. Then, click the <i>Import...</i> button near the "
+"bottom."
+msgstr ""
+"Khi <i>Bộ quản lý chứng nhận</i> Hiển thị màn hình, nhấp vào <i>Nhà cầm "
+"quyền</i> tab. sau đó, nhấn vào <i>Nhập...</i> Nút ở phía dưới."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"When the certificate finishes downloading, it will appear in your default "
+"Downloads folder. Usually, this can be accessed via the Dock near the Trash "
+"icon, or, depending on your browser, it may appear in a dedicated downloads "
+"window. Locate the file and double-click to open it."
+msgstr ""
+"Khi chứng nhận này tải về xong, nó sẽ xuất hiện trong thư mục tải về mặc "
+"định của bạn. Thông thường, nó có thể truy cập qua dấu Neo gần biểu tượng "
+"Rác, hoặc, tùy thuộc vào trình duyệt của bạn, nó có thể xuất hiện trong cửa "
+"sổ tải về tận tụy. Xác định tập tin và nhấn đôi để mở nó."
+
+# html/captive-portal/templates/networklogoff.html
+msgid ""
+"When you are done with your usage of this device, please click on the Logoff"
+" button below to terminate your network session"
+msgstr ""
+"Khi bạn sử dụng thiết bị này xong, vui lòng nhắp vào cái nút Đăng xuất bên "
+"dưới để chấm dứt phiên chạy mạng."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Windows Certificate Import Wizard"
+msgstr "Trợ lý Nhập chứng nhận Windows"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Windows Certificate dialogue"
+msgstr "Hộp thoại chứng nhận Windows"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Windows Security Warning dialogue"
+msgstr "Hộp thoại cảnh báo bảo mật Windows"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Windows Select Certificate Store prompt"
+msgstr "Cửa sổ Chọn dấu nhắc Lưu chứng nhận"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "Windows certificate installation"
+msgstr "Cài đặt chứng nhận Windows"
+
+# html/captive-portal/templates/ssl_inspection/other.html
+msgid ""
+"Windows phones and Linux devices are included in the devices that will need "
+"a browser certificate."
+msgstr ""
+"Các thiết bị điện thoại Windows và Linux được bao gồm trong các thiết bị cần"
+" thiết bị cung cấp chứng nhận duyệt."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Windows save prompt"
+msgstr "Lưu nhắc Windows"
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid "Windows security prompt"
+msgstr "Nhắc bảo mật Windows"
+
+# pf::person::FIELDS
+msgid "Work_phone"
+msgstr "Điện thoại _làm việc"
+
+# html/captive-portal/templates/pki_provider/packetfence_local.html
+# html/captive-portal/templates/pki_provider/packetfence_pki.html
+# html/captive-portal/templates/pki_provider/scep.html
+msgid "You can also modify the password below."
+msgstr "Bạn cũng có thể sửa đổi mật khẩu bên dưới."
+
+# html/captive-portal/templates/lost_stolen.html
+msgid ""
+"You do not own this device %s, you can not declare it as lost or stolen."
+msgstr ""
+"Bạn không sở hữu thiết bị này %sAnh không thể tuyên bố nó là đồ thất lạc hay"
+" đồ ăn cắp."
+
+# html/captive-portal/templates/emails/emails-fleetdm-cve.html
+# html/captive-portal/templates/emails/emails-fleetdm-policy-violation.html
+# html/captive-portal/templates/emails/emails-security_event-triggered.html
+msgid "You have been detected doing malicious activity on the network."
+msgstr "Bạn đã bị phát hiện đang hoạt động độc hại trên mạng."
+
+# html/captive-portal/templates/status.html
+msgid "You have no registered devices."
+msgstr "Anh không có thiết bị đăng ký."
+
+# html/captive-portal/templates/max-nodes-reached.html
+msgid ""
+"You have reached the maximum amount of endpoints you can register with this "
+"username."
+msgstr ""
+"Bạn đã tới số điểm kết thúc tối đa mà bạn có thể đăng ký với tên người dùng "
+"này."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"You may not see exactly the same thing if you are using another browser or a"
+" different version of macOS; however, the general process and wording should"
+" be the same."
+msgstr ""
+"Bạn có thể không thấy chính xác cùng một điều nếu bạn đang sử dụng một trình"
+" duyệt khác hoặc một phiên bản khác của macOS; tuy nhiên, tiến trình tổng "
+"quát và từ ngữ nên giống nhau."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "You may now close the window."
+msgstr "Bây giờ anh có thể đóng cửa sổ lại."
+
+# html/captive-portal/lib/captiveportal/PacketFence/Form/Authentication.pm
+msgid "You must accept the terms and conditions"
+msgstr "Anh phải chấp nhận điều kiện và điều kiện."
+
+# html/captive-portal/templates/provisioner/accept.html
+msgid "You should not seeing this page, something went wrong."
+msgstr "Anh không nên xem trang này, có chuyện không ổn rồi."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid "You should now see a blue \"+\" right next to the certificate."
+msgstr "Bây giờ bạn sẽ thấy một \"+\" xanh dương ngay bên cạnh chứng nhận."
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid ""
+"You will be prompted to enter a name for the certificate. Enter a meaningful"
+" name for this network and click <i>OK</i>."
+msgstr ""
+"Bạn sẽ được nhắc nhập tên cho chứng nhận này. Hãy nhập một tên đầy ý nghĩa "
+"cho mạng này rồi nhấn vào. <i>Được rồi</i>."
+
+# html/captive-portal/templates/ssl_inspection/android.html
+msgid ""
+"You will see a confirmation that the certificate has been installed. In your"
+" notifications, it might say <i>Network may be monitored by an unknown third"
+" party</i>. That is normal and should be ignored."
+msgstr ""
+"Bạn sẽ thấy một xác nhận chứng nhận đã được cài đặt. Trong thông báo của "
+"bạn, nó có thể nói <i>Mạng có thể bị một nhóm thứ ba không rõ</i>Điều đó là "
+"bình thường và nên bỏ qua."
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid ""
+"You will see a confirmation that the profile has been installed, and that "
+"the certificate is <i>Verified</i>. Simply tap the <i>Done</i> button in the"
+" top-right corner."
+msgstr ""
+"Bạn sẽ thấy một xác nhận mà hồ sơ đã được cài đặt, và chứng nhận là <i>Đã "
+"nhập</i>Chỉ cần gõ vào <i>Hoàn tất</i> Nút ở góc phải trên cùng."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"You're done! After entering your password, you can close Keychain Access and"
+" continue browsing as usual; in most cases, you will not notice anything "
+"different after the certificate is installed."
+msgstr ""
+"Bạn đã nhập mật khẩu của mình, bạn có thể đóng Keychain access và tiếp tục "
+"duyệt như thường lệ; trong hầu hết trường hợp, bạn sẽ không nhận thấy bất cứ"
+" điều gì khác nhau sau khi chứng nhận được cài đặt."
+
+# html/captive-portal/templates/ssl_inspection/chrome.html
+msgid ""
+"You're done! After trusting the CA, you can click OK, close the Settings "
+"page, and continue browsing as usual; in most cases, you will not notice "
+"anything different after the certificate is installed."
+msgstr ""
+"Sau khi tin tưởng CA, bạn có thể nhấn OK, đóng trang Thiết lập, và tiếp tục "
+"duyệt như bình thường; trong đa số trường hợp, bạn sẽ không nhận thấy gì "
+"khác nhau sau khi chứng nhận được cài đặt."
+
+# html/captive-portal/templates/ssl_inspection/osx.html
+msgid ""
+"You're done! You can close Keychain Access and continue browsing as usual; "
+"in most cases, you will not notice anything different after the certificate "
+"is installed."
+msgstr ""
+"Bạn có thể đóng Keychain A access và tiếp tục duyệt như thường lệ; trong hầu"
+" hết trường hợp, bạn sẽ không nhận thấy bất cứ điều gì khác nhau sau khi "
+"chứng nhận được cài đặt."
+
+# html/captive-portal/templates/ssl_inspection/windows.html
+msgid ""
+"You're done! You may close any remaining certificate windows and continue "
+"browsing as usual; in most cases, you will not notice anything different "
+"after the certificate is installed."
+msgstr ""
+"Bạn đã làm xong! Bạn có thể đóng bất cứ cửa sổ chứng nhận nào còn lại và "
+"tiếp tục duyệt như thường lệ; trong đa số trường hợp, bạn sẽ không nhận thấy"
+" bất cứ điều gì khác nhau sau khi chứng nhận được cài đặt."
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid ""
+"You're done! You may close or switch away from the Settings application and "
+"continue browsing as usual; in most cases, you will not notice anything "
+"different after the certificate is installed."
+msgstr ""
+"Bạn có thể đóng hoặc chuyển đổi từ ứng dụng Thiết lập và tiếp tục duyệt như "
+"thường lệ; trong đa số trường hợp, bạn sẽ không nhận thấy gì khác sau khi "
+"chứng nhận được cài đặt."
+
+# html/captive-portal/templates/ssl_inspection/android.html
+# html/captive-portal/templates/ssl_inspection/firefox.html
+# html/captive-portal/templates/ssl_inspection/opera.html
+msgid ""
+"You're done! You may continue browsing as usual; in most cases, you will not"
+" notice anything different after the certificate is installed."
+msgstr ""
+"Bạn có thể tiếp tục duyệt như bình thường; trong đa số trường hợp, bạn sẽ "
+"không nhận thấy bất cứ điều gì khác nhau sau khi chứng nhận được cài đặt."
+
+# html/captive-portal/templates/status.html
+msgid ""
+"You're not connected to the network, but have a timebank of <strong "
+"id='timeleft'>%s</strong>"
+msgstr ""
+"Anh không kết nối với mạng lưới, nhưng có một khoảng thời gian <strong "
+"id='timeleft'>%s</strong>"
+
+# html/captive-portal/templates/status.html
+msgid "Your WPA Wi-Fi key: "
+msgstr "Khóa Wi-Fi WPA của bạn: "
+
+# html/captive-portal/templates/provisioner/android.html
+# html/captive-portal/templates/provisioner/mobileconfig.html
+msgid ""
+"Your XML configuration have been generated and is now ready to download.  "
+"Follow the link below in order to get access to the secure SSID."
+msgstr ""
+"Cấu hình XML của bạn đã được tạo ra và bây giờ đã sẵn sàng để tải về. Theo "
+"liên kết bên dưới để truy cập an toàn. SSID."
+
+# html/captive-portal/templates/lost_stolen.html
+msgid "Your device %s has been declared as lost or stolen."
+msgstr "Thiết bị của bạn %s đã được tuyên bố là bị mất hoặc bị đánh cắp."
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_confirmed.html
+# html/captive-portal/templates/emails/emails-
+# guest_sponsor_preregistration.html
+msgid "Your guest access to the network was authorized."
+msgstr "Khách truy cập vào mạng đã được ủy quyền."
+
+# html/captive-portal/templates/emails/emails-
+# guest_email_preregistration_confirmed.html
+msgid "Your guest access to the network was confirmed."
+msgstr "Vị khách truy cập vào mạng đã được xác nhận."
+
+# html/captive-portal/templates/status.html
+msgid "Your network access ends in <strong id=\"expiration\"></strong>"
+msgstr "Kết thúc truy cập mạng của bạn <strong id=\"expiration\"></strong>"
+
+# html/captive-portal/templates/status.html
+msgid "Your network access has expired."
+msgstr "Việc truy cập mạng của anh đã hết hạn."
+
+# html/captive-portal/templates/status.html
+msgid "Your network access is <strong>paused</strong>"
+msgstr "Truy cập mạng của bạn là <strong>bị dừng</strong>"
+
+# html/captive-portal/templates/release.html
+msgid ""
+"Your network access is currently being enabled. Once network connectivity is"
+" established you will be automatically redirected."
+msgstr ""
+"Truy cập mạng của bạn đang được bật. Một khi kết nối mạng đã được thiết lập,"
+" bạn sẽ tự động chuyển hướng."
+
+# html/captive-portal/templates/status/reset_password_token_success.html
+msgid "Your password has been reset successfully."
+msgstr "Mật khẩu của bạn đã được đặt lại thành công."
+
+# html/captive-portal/templates/status/reset_password.html
+msgid "Your password has been updated"
+msgstr "Comment"
+
+# html/captive-portal/templates/status.html
+msgid "Your registered devices"
+msgstr "Thiết bị đã đăng ký của bạn"
+
+# html/captive-portal/templates/waiting.html
+msgid ""
+"Your registration is pending approval. Once approved you will be "
+"automatically redirected."
+msgstr ""
+"Đăng ký của bạn đang chờ phê chuẩn. Một khi chấp thuận, bạn sẽ được tự động "
+"chuyển hướng."
+
+# html/captive-portal/templates/waiting.html
+msgid ""
+"Your registration is pending approval. You can safely close this page, your "
+"network access will be automatically enabled once the sponsor activates your"
+" access."
+msgstr ""
+"Việc đăng ký của bạn đang chờ phê chuẩn. Bạn có thể đóng trang này một cách "
+"an toàn, quyền truy cập mạng của bạn sẽ được tự động bật khi nhà tài trợ "
+"kích hoạt quyền truy cập của bạn."
+
+# html/captive-portal/templates/emails/emails-
+# billing_stripe_customer.subscription.deleted.html
+msgid "Your subscribtion was cancelled."
+msgstr "Việc thu hồi tài sản của anh đã bị hủy bỏ."
+
+# html/captive-portal/templates/status/billing_cancel_subscription.html
+msgid "Your subscription has been canceled successfully"
+msgstr "Việc đăng ký của bạn bị hủy bỏ thành công"
+
+# html/captive-portal/templates/emails/emails-
+# guest_local_account_creation.html
+msgid ""
+"Your user account has been created while registering your device. You may "
+"now want to use it for different features (devices registration, status "
+"page)."
+msgstr ""
+"Tài khoản người dùng của bạn đã được tạo khi đăng ký thiết bị. Có lẽ bạn "
+"muốn sử dụng nó cho các tính năng khác nhau (v. d. đăng ký (v. d., trang "
+"trạng thái)."
+
+# lib/pf/web.pm
+msgid "automatically refresh"
+msgstr "Tự động nạp lại"
+
+# pf::web::constants (Locales)
+msgid "de_DE"
+msgstr "de_DE"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/Activate/Email.pm
+msgid "does not have permission to sponsor a user"
+msgstr "không có quyền để tài trợ một người dùng"
+
+# pf::web::constants (Locales)
+msgid "en_US"
+msgstr "en_US"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/SecurityEvent.pm
+# lib/pf/web/release.pm
+msgid "error: max re-enables reached"
+msgstr "Lỗi: lỗi tối đa làm lại được tới"
+
+# lib/pf/web/release.pm
+msgid "error: not found in the database"
+msgstr "Lỗi: không tìm thấy trong cơ sở dữ liệu"
+
+# pf::web::constants (Locales)
+msgid "es_ES"
+msgstr "Vâng."
+
+# pf::web::constants (Locales)
+msgid "fr_CA"
+msgstr "fr_CA"
+
+# pf::web::constants (Locales)
+msgid "fr_FR"
+msgstr "fr_ FR"
+
+# pf::web::constants (Locales)
+msgid "he_IL"
+msgstr "_lL"
+
+# html/captive-portal/templates/layout.html
+msgid "help: provide info"
+msgstr "trợ giúp: cung cấp thông tin"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/SSL_Inspection.pm
+msgid "iOS certificate installation"
+msgstr "cài đặt chứng nhận iOS"
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid "iOS certificate trust prompt"
+msgstr "Dấu nhắc tin tưởng chứng nhận iOS"
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid "iOS passcode prompt"
+msgstr "iOS mật mã nhắc"
+
+# html/captive-portal/templates/ssl_inspection/ios.html
+msgid "iOS trust prompt"
+msgstr "iOS tin tưởng nhắc nhở"
+
+# pf::web::constants (Locales)
+msgid "it_IT"
+msgstr "nó _BAR_"
+
+# pf::web::constants (Locales)
+msgid "nb_NO"
+msgstr "nb_ NO"
+
+# pf::web::constants (Locales)
+msgid "nl_NL"
+msgstr "nl_NL"
+
+# pf::web::constants (Locales)
+msgid "pl_PL"
+msgstr "G_pL"
+
+# pf::web::constants (Locales)
+msgid "pt_BR"
+msgstr "pt_BR"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/DynamicRouting/Module/Authentication/Blackhole.pm
+msgid "register: not allowed to register"
+msgstr "bộ nhớ: không được phép đăng ký"
+
+# html/captive-portal/lib/captiveportal/PacketFence/DynamicRouting/Module.pm
+msgid "release: enabling network"
+msgstr "phát hành: bật mạng"
+
+# lib/pf/web/release.pm
+msgid "release: reopen browser"
+msgstr "thả: bật lại trình duyệt"
+
+# html/captive-portal/templates/emails/emails-guest_sponsor_activation.html
+msgid "requested guest access to your network."
+msgstr "yêu cầu khách truy cập mạng của bạn."
+
+# lib/pf/web.pm
+msgid "scan in progress contact support if too long"
+msgstr "quét trong hỗ trợ liên lạc tiến trình nếu quá lâu"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Remediation.pm
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/SecurityEvent.pm
+# html/captive-portal/templates/scan-in-progress.html
+msgid "scan: scan in progress"
+msgstr "quét: đang quét"
+
+# html/captive-portal/lib/captiveportal/PacketFence/Controller/Remediation.pm
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/SecurityEvent.pm
+msgid "security event: quarantine established"
+msgstr "Sự kiện an ninh: Đã thiết lập cách ly"
+
+# html/captive-
+# portal/lib/captiveportal/PacketFence/Controller/SecurityEvent.pm
+# lib/pf/web.pm
+msgid "system scan in progress"
+msgstr "Đang quét hệ thống"
+
+# pf::web::constants (Locales)
+msgid "tr_TR"
+msgstr "tr_TR"

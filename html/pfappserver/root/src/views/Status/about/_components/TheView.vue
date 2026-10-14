@@ -1,32 +1,36 @@
 <template>
-  <b-card no-body>
-    <b-card-header class="pl-4">
-      <h4 class="d-inline mb-0">{{ isSaas ? 'PacketFence Cloud' : 'PacketFence' }} {{ version }}</h4>
-    </b-card-header>
-    <div class="card-body">
-      <!-- Filter -->
-      <div class="section-sidebar-filter px-0 mb-4">
-        <b-input-group>
-          <b-input-group-prepend>
-            <icon class="h-auto" name="search" scale=".75" />
-          </b-input-group-prepend>
-          <b-form-input v-model="filter" v-focus
-            class="border-0" type="text" :placeholder="$t('Filter')" />
-          <b-input-group-append v-if="filter">
-            <b-btn @click="filter = ''"><icon name="times-circle" /></b-btn>
-          </b-input-group-append>
+  <div class="nac20-overview">
+    <header class="nac20-hero">
+      <div class="nac20-hero-copy">
+        <span class="nac20-eyebrow">NỀN TẢNG KIỂM SOÁT TRUY CẬP MẠNG</span>
+        <h1>NAC<span>20</span></h1>
+        <p>Quản trị tập trung. Kết nối an toàn.</p>
+        <div class="nac20-hero-meta"><span>Công Ty TNHH TN20</span><span>20.com.vn</span></div>
+      </div>
+      <div class="nac20-system-card">
+        <span class="nac20-system-label">THÔNG TIN HỆ THỐNG</span>
+        <dl><div><dt>Phiên bản</dt><dd>{{ version || '—' }}</dd></div>
+          <div><dt>Máy chủ</dt><dd>{{ hostname || '—' }}</dd></div>
+          <div><dt>Ngôn ngữ mặc định</dt><dd>Tiếng Việt</dd></div></dl>
+      </div>
+    </header>
+    <main class="nac20-overview-body">
+      <div class="nac20-section-heading">
+        <div><span class="nac20-eyebrow">KHÔNG GIAN QUẢN TRỊ</span><h2>Điều hành hệ thống</h2></div>
+        <b-input-group class="nac20-search">
+          <b-input-group-prepend is-text><icon name="search" /></b-input-group-prepend>
+          <b-form-input v-model="filter" type="search" placeholder="Tìm chức năng…" aria-label="Tìm chức năng quản trị" />
         </b-input-group>
       </div>
-
       <!-- Quick Links -->
       <template v-if="filteredSections.length">
-        <h5 class="mb-3" v-t="'Quick Links'"></h5>
+        <h3 class="nac20-group-title">Truy cập nhanh</h3>
         <b-row class="mb-4">
-          <b-col cols="6" md="4" lg="2" v-for="section in filteredSections" :key="section.path" class="mb-3">
+          <b-col cols="12" sm="6" lg="4" xl="3" v-for="section in filteredSections" :key="section.path" class="mb-3">
           <div class="about-card-wrapper">
             <b-card class="about-card h-100 text-center" :to="section.path" tag="router-link">
               <icon :name="section.icon" scale="2" class="mb-2" />
-              <div class="small">{{ section.name }}</div>
+              <div class="nac20-card-title">{{ section.name }}</div>
             </b-card>
             <div class="about-card-dropdown" v-if="section.items && section.items.length">
               <!-- Wrap each item group in a div for proper Vue tracking -->
@@ -53,13 +57,13 @@
 
       <!-- Configuration -->
       <template v-if="filteredConfigSections.length">
-        <h5 class="mb-3" v-t="'Configuration'"></h5>
+        <h3 class="nac20-group-title">Cấu hình hệ thống</h3>
         <b-row class="mb-4">
-          <b-col cols="6" md="4" lg="2" v-for="section in filteredConfigSections" :key="section.path" class="mb-3">
+          <b-col cols="12" sm="6" lg="4" xl="3" v-for="section in filteredConfigSections" :key="section.path" class="mb-3">
           <div class="about-card-wrapper">
             <b-card class="about-card h-100 text-center" :to="section.path" tag="router-link">
               <icon :name="section.icon" scale="2" class="mb-2" />
-              <div class="small">{{ section.name }}</div>
+              <div class="nac20-card-title">{{ section.name }}</div>
             </b-card>
             <div class="about-card-dropdown" v-if="section.items && section.items.length">
               <div v-for="item in section.items" :key="item.path || item.name" class="about-card-dropdown-group">
@@ -86,57 +90,19 @@
         </b-row>
       </template>
 
-      <!-- Help -->
-      <template v-if="isSaas || guides.length">
-        <h5 class="mb-3" v-t="'Help'"></h5>
-        <b-row>
-          <!-- Support Inquiry -->
-          <b-col v-if="isSaas" cols="6" md="4" lg="2" class="mb-3">
-            <div class="about-card-doc-wrapper">
-              <a href="https://www.packetfence.com/docs/" target="_blank" class="about-card-support-link">
-                <b-card class="about-card h-100 text-center d-flex align-items-center justify-content-center">
-                  <icon name="question-circle" scale="2" class="mb-2" />
-                  <div class="small">{{ $t('Support Inquiry') }}</div>
-                </b-card>
-              </a>
-            </div>
-          </b-col>
-          <b-col cols="6" md="4" lg="2" v-for="doc in guides" :key="doc.name" class="mb-3">
-            <div class="about-card-doc-wrapper">
-              <b-card no-body class="about-card h-100 text-center d-flex flex-column">
-                <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1 p-3">
-                  <icon name="book" scale="2" class="mb-2" />
-                  <div class="small">{{ doc.text }}</div>
-                </div>
-                <hr class="m-0">
-                <div class="d-flex about-card-doc-actions">
-                  <a href="#" class="about-card-doc-link" @click.prevent="openGuideFullscreen(doc.name)">
-                    HTML <small class="text-muted">({{ formatFileSize(doc.size) }})</small>
-                  </a>
-                  <a v-if="doc.pdf_size" :href="`/static/doc/${doc.name.replace('.html', '.pdf')}`" target="_blank"
-                    class="about-card-doc-link">
-                    PDF <small class="text-muted">({{ formatFileSize(doc.pdf_size) }})</small>
-                  </a>
-                </div>
-              </b-card>
-            </div>
-          </b-col>
-        </b-row>
-      </template>
-    </div>
-  </b-card>
+      <div v-if="!filteredSections.length && !filteredConfigSections.length" class="nac20-empty" role="status">
+        <h3>Không tìm thấy chức năng</h3><p>Hãy thử từ khóa khác để tiếp tục.</p>
+        <b-button variant="outline-primary" @click="filter = ''">Xóa bộ lọc</b-button>
+      </div>
+    </main>
+    <footer class="nac20-footer"><strong>NAC20</strong><span>Công Ty TNHH TN20 · 20.com.vn</span></footer>
+  </div>
 </template>
 
 <script>
 import { computed, onMounted, ref, watch } from '@vue/composition-api'
-import bytes from '@/utils/bytes'
-import { focus } from '@/directives'
 import i18n from '@/utils/locale'
 import { useSections as useConfigSections } from '@/views/Configuration/_composables/useSections'
-
-const directives = {
-  focus
-}
 
 const setup = (props, context) => {
   const { root: { $store, $router } = {} } = context
@@ -172,22 +138,7 @@ const setup = (props, context) => {
   const version = computed(() => $store.getters['system/version'])
   const isSaas = computed(() => $store.getters['system/isSaas'])
 
-  // Documentation guides
-  onMounted(() => $store.dispatch('documentation/getIndex'))
-  const guides = computed(() => {
-    const index = $store.getters['documentation/index'] || []
-    return [...index].sort((a, b) => a.text.localeCompare(b.text))
-  })
-
-  const formatFileSize = (value) => {
-    return bytes.toHuman(value, 2, true) + 'B'
-  }
-
-  const openGuideFullscreen = (filename) => {
-    $store.dispatch('documentation/setPath', filename)
-    $store.dispatch('documentation/openViewer')
-    $store.commit('documentation/FULLSCREEN_ON')
-  }
+  const hostname = computed(() => $store.getters['system/hostname'])
 
   // Initialize preferences and load saved searches
   onMounted(() => {
@@ -420,9 +371,7 @@ const setup = (props, context) => {
     filter,
     filteredSections,
     filteredConfigSections,
-    formatFileSize,
-    guides,
-    openGuideFullscreen,
+    hostname,
     sections,
     configSections
   }
@@ -431,124 +380,50 @@ const setup = (props, context) => {
 // @vue/component
 export default {
   name: 'the-view',
-  directives,
   setup
 }
 </script>
 
 <style lang="scss" scoped>
-.about-card-wrapper {
-  position: relative;
-
-  &:hover {
-    .about-card {
-      color: var(--primary);
-      border-color: var(--primary);
-    }
-
-    .about-card-dropdown {
-      display: flex;
-    }
-  }
-}
-
-.about-card {
-  color: var(--secondary);
-  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-
-.about-card-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  flex-direction: column;
-  background: var(--white);
-  border: 1px solid var(--primary);
-  border-top: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.about-card-dropdown-group {
-  border-bottom: 1px solid var(--light);
-
-  &:last-child {
-    border-bottom: none;
-  }
-}
-
-.about-card-dropdown-item {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.85rem;
-  color: var(--secondary);
-  text-decoration: none;
-
-  &:hover {
-    background: var(--light);
-    color: var(--primary);
-  }
-
-  &.about-card-dropdown-item-nested {
-    padding-left: 1.5rem;
-    font-size: 0.8rem;
-    font-style: italic;
-    background-color: rgba(0, 0, 0, 0.02);
-    border-top: 1px solid var(--light);
-  }
-}
-
-.about-card-dropdown-header {
-  display: block;
-  padding: 0.4rem 0.75rem 0.1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--gray);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.about-card-doc-wrapper {
-  position: relative;
-  height: 100%;
-
-  &:hover {
-    .about-card {
-      color: var(--primary);
-      border-color: var(--primary);
-    }
-  }
-}
-
-.about-card-doc-actions {
-  display: flex;
-}
-
-.about-card-doc-link {
-  flex: 1 1 50%;
-  padding: 0.5rem 0.25rem;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  text-decoration: none;
-  color: var(--secondary);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-
-  & + & {
-    border-left: 1px solid rgba(0, 0, 0, 0.125);
-  }
-
-  &:hover {
-    color: var(--primary);
-    background-color: var(--light);
-  }
-}
-
-.about-card-support-link {
-  text-decoration: none;
-  display: block;
-  height: 100%;
-}
+.nac20-overview { max-width: 1600px; margin: 1.5rem auto; }
+.nac20-hero { display: flex; gap: 2rem; align-items: center; justify-content: space-between; padding: 2.5rem 3rem; border-radius: 20px; color: #fff; background: radial-gradient(ellipse at top right, #1d5864 0, transparent 65%), #10243d; box-shadow: 0 12px 32px rgba(16,36,61,.12); }
+.nac20-eyebrow { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .14em; color: #688399; }
+.nac20-hero .nac20-eyebrow { color: #93c8ca; }
+.nac20-hero h1 { margin: .75rem 0; font-size: clamp(2.75rem, 5vw, 4rem); font-weight: 750; letter-spacing: -.06em; line-height: 1.1; }
+.nac20-hero h1 span { color: #49d9ca; }
+.nac20-hero p { color: #d8e3ec; font-size: 1.1rem; margin-bottom: 1.5rem; }
+.nac20-hero-meta { display: flex; flex-wrap: wrap; gap: .6rem 1.25rem; font-size: .8rem; color: #aec6d7; }
+.nac20-system-card { min-width: 285px; max-width: 100%; padding: 1.5rem; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15); border-radius: 14px; }
+.nac20-system-label { font-size: .65rem; letter-spacing: .12em; color: #a7cccf; font-weight: 700; }
+.nac20-system-card dl { margin: 1rem 0 0; }
+.nac20-system-card dl div { display: flex; justify-content: space-between; gap: 1.25rem; padding: .6rem 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+.nac20-system-card dl div:last-child { border: 0; padding-bottom: 0; }
+.nac20-system-card dt { font-weight: 400; font-size: .8rem; color: #c6d6e1; }
+.nac20-system-card dd { margin: 0; font-size: .8rem; font-weight: 600; text-align: right; overflow-wrap: anywhere; }
+.nac20-overview-body { padding: 2.5rem .25rem .5rem; }
+.nac20-section-heading { display: flex; gap: 1.5rem; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
+.nac20-section-heading h2 { font-size: 1.65rem; font-weight: 650; color: #10243d; margin: .45rem 0 0; letter-spacing: -.025em; }
+.nac20-search { max-width: 340px; border: 1px solid #dce5ed; background: white; border-radius: 12px; overflow: hidden; }
+.nac20-search ::v-deep .input-group-text { border: 0; background: white; color: #688399; padding-left: 1rem; }
+.nac20-search ::v-deep .form-control { background: white; border: 0; min-height: 44px; }
+.nac20-group-title { margin: 0 0 1rem; font-size: .95rem; font-weight: 650; color: #40556b; }
+.about-card-wrapper { position: relative; height: 100%; }
+.about-card { display: block; border: 1px solid #e0e8ef; border-radius: 14px; background: white; color: #16344d; box-shadow: 0 3px 12px rgba(16,36,61,.025); transition: border-color .18s, box-shadow .18s, transform .18s; }
+.about-card ::v-deep .card-body { display: flex; align-items: center; gap: 1rem; text-align: left; padding: 1.35rem; }
+.about-card ::v-deep .fa-icon { color: #178579; flex-shrink: 0; margin-bottom: 0 !important; width: 24px; height: 24px; }
+.nac20-card-title { font-size: .9rem; font-weight: 600; line-height: 1.5; }
+.about-card:hover, .about-card:focus { border-color: #22b8a8; box-shadow: 0 8px 24px rgba(16,36,61,.08); transform: translateY(-2px); text-decoration: none; }
+.about-card:focus-visible { outline: 3px solid #22b8a8; outline-offset: 3px; }
+.about-card-dropdown { display: none; position: absolute; top: calc(100% - 2px); left: 0; right: 0; z-index: 20; padding: .5rem; flex-direction: column; border: 1px solid #dce5ed; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 12px 24px rgba(16,36,61,.12); }
+.about-card-wrapper:hover .about-card-dropdown, .about-card-wrapper:focus-within .about-card-dropdown { display: flex; }
+.about-card-dropdown-item { display: block; padding: .65rem .75rem; border-radius: 6px; color: #40556b; font-size: .8rem; }
+.about-card-dropdown-item:hover, .about-card-dropdown-item:focus { background: #eef8f6; color: #0b7266; text-decoration: none; }
+.about-card-dropdown-item-nested { padding-left: 1.5rem; }
+.about-card-dropdown-header { padding: .6rem .75rem .25rem; font-size: .7rem; font-weight: 700; color: #688399; }
+.nac20-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem; padding: 1.5rem .25rem; border-top: 1px solid #dce5ed; color: #688399; font-size: .75rem; }
+.nac20-footer strong { letter-spacing: .05em; color: #40556b; }
+.nac20-empty { padding: 3rem 1rem; text-align: center; color: #688399; background: white; border-radius: 14px; margin-bottom: 2rem; }
+.nac20-empty h3 { font-size: 1.2rem; font-weight: 600; color: #16344d; }
+@media (max-width: 767px) { .nac20-hero { flex-direction: column; align-items: stretch; padding: 1.75rem; gap: 1.5rem; } .nac20-system-card { min-width: 0; } .nac20-section-heading { align-items: stretch; flex-direction: column; } .nac20-search { max-width: none; } .nac20-overview { margin-top: .75rem; } }
+@media (prefers-reduced-motion: reduce) { .about-card { transition: none; } .about-card:hover, .about-card:focus { transform: none; } }
 </style>

@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="d-flex align-items-center">
         {{ $t('Authentication Sources') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#_authentication_sources" />
+
       </h4>
       <p v-t="'Define the authentication sources to let users access the captive portal or the admin Web interface.'"></p>
       <p class="mb-0" v-t="'Each connection profile must be associated with one or multiple authentication sources while 802.1X connections use the ordered internal sources to determine which role to use. External sources are never used with 802.1X connections.'"></p>

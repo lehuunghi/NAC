@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="d-flex align-items-center">
         {{ $t('Provisioning') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#provision" />
+
       </h4>
     </b-card-header>
     <div class="card-body">

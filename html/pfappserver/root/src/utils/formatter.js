@@ -9,7 +9,7 @@ import MessageFormat from 'messageformat'
 export default class CustomFormatter {
   constructor (options = {}) {
     // set locale
-    this._locale = options.locale || 'en-US'
+    this._locale = options.locale || 'vi'
     // instanstantiate formatter
     this._formatter = new MessageFormat(this._locale)
     // initialize object cache

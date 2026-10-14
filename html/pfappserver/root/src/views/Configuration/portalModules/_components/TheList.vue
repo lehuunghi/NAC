@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="mb-0">
         {{ $t('Portal Modules') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#_portal_modules" />
+
       </h4>
     </b-card-header>
     <!-- Visual representation of portal modules -->

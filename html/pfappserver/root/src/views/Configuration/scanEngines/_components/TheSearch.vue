@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="d-flex align-items-center mb-0">
         {{ $t('Scan Engines') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#_scanner_definition" />
+
       </h4>
     </b-card-header>
     <div class="card-body">

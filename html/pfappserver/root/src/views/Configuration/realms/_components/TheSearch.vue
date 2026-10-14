@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="d-flex align-items-center mb-0">
         {{ $t('Realms') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#_default_domain_configuration" />
+
       </h4>
       <base-services v-bind="services" class="mt-3 mb-0" variant="info" />
     </b-card-header>

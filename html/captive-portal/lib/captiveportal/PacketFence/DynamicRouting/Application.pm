@@ -626,6 +626,7 @@ sub _resolve_theme_assets {
     for my $name (@names) {
         my $base = "$captiveportal_profile_templates_path/$name";
         $assets{theme_path}     //= "/profile-templates/$name/theme.css"     if -f "$base/theme.css" && -s "$base/theme.css";
+        $assets{logo}           //= "/profile-templates/$name/logo.svg"       if -f "$base/logo.svg";
         $assets{logo}           //= "/profile-templates/$name/logo.png"       if -f "$base/logo.png";
         $assets{background_url} //= "/profile-templates/$name/background.png" if -f "$base/background.png";
     }

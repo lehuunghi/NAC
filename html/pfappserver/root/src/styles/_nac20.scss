@@ -1,0 +1,14 @@
+// NAC20 administration design system.
+body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; background: #f3f6fa; color: #34495e; }
+.nac20-navbar { background: #10243d !important; box-shadow: 0 2px 12px rgba(16,36,61,.14); min-height: 60px; padding: .65rem 1.5rem; }
+.nac20-navbar .navbar-brand { margin-right: 2rem; }
+.nac20-navbar .nav-link { font-weight: 500; border-radius: 7px; padding: .5rem .85rem !important; }
+.nac20-navbar .nav-link.active { background: rgba(34,184,168,.16); color: #8de4da !important; }
+.nac20-workspace { padding-left: 1.5rem; padding-right: 1.5rem; }
+.card { border-color: #dfe7ef; border-radius: 10px; }
+.card-header { border-color: #e7edf3; padding-top: 1rem; padding-bottom: 1rem; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+.btn { border-radius: 7px; font-weight: 500; }
+.form-control, .custom-select { border-radius: 7px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #178579; outline-offset: 3px; }
+@media (max-width: 767px) { .nac20-workspace { padding-left: .75rem; padding-right: .75rem; } .nac20-navbar { padding-left: 1rem; padding-right: 1rem; } }

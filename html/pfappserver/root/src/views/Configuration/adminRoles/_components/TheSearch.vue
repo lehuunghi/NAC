@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="d-flex align-items-center mb-3">
         {{ $t('Admin Roles') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#_admin_access" />
+
       </h4>
       <p class="mb-0" v-t="'Define roles with specific access rights to the Web administration interface. Roles are assigned to users depending on their authentication source.'"></p>
     </b-card-header>

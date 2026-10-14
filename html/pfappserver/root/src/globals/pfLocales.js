@@ -1,4 +1,5 @@
 export const pfLocales = [
+  { label: 'Vietnamese', locale: 'vi_VN', is_ui: true },
   {
     label: 'English', // i18n defer
     locale: 'en_US', is_ui: true

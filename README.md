@@ -1,97 +1,29 @@
-# PacketFence
+# NAC20
 
+**Nền tảng kiểm soát truy cập mạng của Công Ty TNHH TN20**
+Tên miền: **20.com.vn**
 
-## What is PacketFence?
+NAC20 quản lý việc kết nối vào mạng có dây và không dây, xác thực người dùng, đăng ký thiết bị và xử lý các sự kiện bảo mật. Hệ thống hỗ trợ 802.1X, cổng đăng ký truy cập, phân quyền theo vai trò và cách ly thiết bị theo chính sách.
 
-PacketFence is a fully supported, trusted, Free and Open Source
-network access control (NAC) system. Boasting an impressive feature
-set including a captive-portal for registration and remediation,
-centralized wired and wireless management, 802.1X support, layer-2
-isolation of problematic devices, integration with IDS solutions and vulnerability scanners; PacketFence can be used to effectively secure networks - from small to very large heterogeneous networks.
+## Giao diện
 
-You want to know who is on your network? You want to give different access to your network based on who is connecting? PacketFence is for you!
+- Tiếng Việt là ngôn ngữ mặc định của giao diện quản trị và cổng đăng ký truy cập.
+- Trang tổng quan cung cấp tìm kiếm chức năng, truy cập nhanh và cấu hình hệ thống.
+- Thương hiệu hiển thị là NAC20, với thông tin Công Ty TNHH TN20 và 20.com.vn.
+- Các nút, biểu tượng và liên kết mở tài liệu trợ giúp đã được loại bỏ khỏi giao diện quản trị.
 
+## Triển khai
 
-## Installation
+Đây là hệ thống máy chủ Linux, không phải ứng dụng chỉ cần mở một trang HTML. Hãy xây dựng gói cài đặt bằng quy trình trong kho mã nguồn và kiểm tra trên môi trường thử nghiệm trước khi đưa vào vận hành.
 
-Follow the instructions provided in the [Administration Guide](https://packetfence.org/support/index.html#/documentation).
+Máy chủ phải có locale `vi_VN.UTF-8`. Trên Debian, bật `vi_VN.UTF-8 UTF-8` trong `/etc/locale.gen` rồi chạy `locale-gen`. Trên hệ thống dùng glibc có thể chạy `localedef -i vi_VN -f UTF-8 vi_VN.UTF-8`. Chạy `make translation` để biên dịch bộ dịch cổng đăng ký; bản dịch quản trị được đóng gói cùng giao diện.
 
+Cấu hình mặc định dùng tên máy chủ `nac20`, tên miền `20.com.vn` và chuyển hướng sau đăng ký đến `https://20.com.vn/`. Quản trị viên phải cấu hình DNS và chứng thư TLS phù hợp với môi trường thực tế.
 
-## More Information
+## Bản dịch
 
-Noteworthy changes since the last release see the [NEWS file](https://github.com/inverse-inc/packetfence/blob/devel/NEWS.asciidoc).
+Bộ dịch tiếng Việt bao phủ ba danh mục thông báo của giao diện quản trị, API và cổng đăng ký. Các thuật ngữ chính được hiệu chỉnh thủ công; các mô tả kỹ thuật còn lại được dịch với sự hỗ trợ của mô hình dịch máy cục bộ Argos Translate. Cần rà soát câu chữ kỹ thuật trong quá trình nghiệm thu. Các biến chèn, thẻ HTML và khóa cấu hình được bảo toàn.
 
-Upgrading? See the [Upgrade Guide](https://github.com/inverse-inc/packetfence/blob/devel/docs/PacketFence_Upgrade_Guide.asciidoc).
+## Giấy phép và tương thích
 
-For more details and developer visible changes see the [project's page on Github](https://github.com/inverse-inc/packetfence).
-
-## Support
-
-Join the [community](https://packetfence.org/support/index.html#/community) or request [commercial support](https://packetfence.org/support/index.html#/commercial).
-
-## Contribute
-
-PacketFence is a collaborative effort in order to create the best Open Source NAC solution. There are multiple ways you can contribute to the project.
-
-### *You are a network vendor*
-
-Provide Inverse with switches, access points, wireless controllers, etc. so we can support even more equipment.
-
-### *You are a security software vendor*
-
-Provide Inverse with licenses of your software so we can integrate your IDS, Netflow analyzer, IPS, Web filter, etc. directly into PacketFence and its captive portal technology.
-
-### *You are a PacketFence user*
-
-You can provide:
-
-* Documentation reviews, enhancements and translations
-* Share your ideas and participate to the discussion in [mailing lists][mailing_lists]
-* Provide Inverse with switches, access points, wireless controllers, etc. so we can support even more equipment
-
-### *You are a developer*
-
-You can provide:
-
-* Documentation reviews, enhancements and translations
-* Share your ideas and participate to the discussion in [mailing lists][mailing_lists]
-* Patches for bugs or enhancements
-* Write tests
-* Handle tasks in our Roadmap
-
-### *You are a security researcher*
-
-Push PacketFence into new areas by leveraging the extensibility built into PacketFence. A lot of the low-level plumbing is done for you so you can focus on demoing your ideas.
-
-Get in touch with us on the developer [mailing list][mailing_lists] with your ideas!
-
-## Source
-
-Feel free to fork our [github repository](https://github.com/inverse-inc/packetfence) if you are willing to contribute.
-
-Most of the development happens in branches. Once ready for integration into [devel](https://github.com/inverse-inc/packetfence/tree/devel), a pull request is opened and a code review takes place. See the list of [all branches in the works](https://github.com/inverse-inc/packetfence/branches).
-
-## Translations
-
-PacketFence is available in various languages. The following list describes the official translations alongside their maintainers:
-
-* English - Inverse inc.
-* Brazilian Portuguese - Diego de Souza Lopes
-* French - Inverse inc.
-* Norwegian
-* Polish - Maciej Uhlig
-* Spanish (Spain) - Dominique Couot
-
-If you would like to translate the software in an other language, please consult the [FAQ](https://packetfence.org/support/faq/article/how-to-translate-packetfence-in-another-language.html).
-
-## License
-
-Licensed under the GNU General Public License v2.
-
----
-
-[Inverse inc.](https://inverse.ca/) leads the development of the solution. Over the years, numerous people and organizations have contributed to the project and we would like to thank them all !
-
-
-[mailing_lists]: https://packetfence.org/support/index.html#/community "Community Mailing Lists"
-
+Giấy phép GNU GPL và các thông báo bản quyền gốc được giữ nguyên trong `COPYING` và mã nguồn. Các tên gói, dịch vụ, thư mục, lớp và giao thức nội bộ tương thích với nền tảng gốc được giữ để không làm hỏng cài đặt hoặc nâng cấp. Đổi thương hiệu giao diện không thay đổi các quyền theo giấy phép.

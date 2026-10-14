@@ -258,11 +258,13 @@ const actions = {
     })
   },
   setLanguage: ({ state, commit }, params) => {
+    params = { ...params, lang: (params.lang || 'vi').split(/[-_]/)[0] }
+    if (params.lang === 'vi') return Promise.resolve(setI18nLanguage('vi'))
     if (i18n.locale !== params.lang || state.languages.indexOf(params.lang) < 0) {
       if (state.languages.indexOf(params.lang) < 0) {
         return api.getLanguage(params.lang).then(response => {
           let messages = response.data.item.lexicon
-          i18n.setLocaleMessage(params.lang, messages)
+          i18n.setLocaleMessage(params.lang, Object.fromEntries(Object.entries(messages).map(([key, value]) => [key, typeof value === 'string' ? value.replace(/packetfence/gi, 'NAC20') : value])))
           commit('LANGUAGES_UPDATED', [ ...state.languages, params.lang ])
           return setI18nLanguage(params.lang)
         })

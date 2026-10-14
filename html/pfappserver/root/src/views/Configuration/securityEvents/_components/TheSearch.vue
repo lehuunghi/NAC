@@ -3,7 +3,7 @@
     <b-card-header>
       <h4 class="d-flex align-items-center mb-0">
         {{ $t('Security Events') }}
-        <base-button-help class="text-black-50 ml-1" url="PacketFence_Installation_Guide.html#_security_events" />
+
       </h4>
     </b-card-header>
     <div class="card-body">

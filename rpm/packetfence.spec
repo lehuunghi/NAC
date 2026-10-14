@@ -293,7 +293,7 @@ Requires: perl(Crypt::SMIME)
 Requires: perl(Net::DHCP)
 
 # Language packs
-Requires: langpacks-fr, langpacks-es, langpacks-de, langpacks-he, langpacks-it, langpacks-nb, langpacks-nl, langpacks-pl, langpacks-pt
+Requires: langpacks-vi, langpacks-fr, langpacks-es, langpacks-de, langpacks-he, langpacks-it, langpacks-nb, langpacks-nl, langpacks-pl, langpacks-pt
 
 # Monit and monitoring scripts
 Requires: monit, uuid
@@ -352,7 +352,7 @@ heterogeneous networks. PacketFence provides features such as
 %build
 # generate translations
 # TODO this is duplicated in debian/rules, we should aim to consolidate in a 'make' style step
-for TRANSLATION in de en es fr he_IL it nl pl_PL pt_BR nb_NO tr_TR; do
+for TRANSLATION in vi de en es fr he_IL it nl pl_PL pt_BR nb_NO tr_TR; do
     /usr/bin/msgfmt conf/locale/$TRANSLATION/LC_MESSAGES/packetfence.po \
       --output-file conf/locale/$TRANSLATION/LC_MESSAGES/packetfence.mo
 done
@@ -702,12 +702,12 @@ make conf/ssl/server.pem
 chown pf /usr/local/pf/conf/ssl/server.key
 
 #Make configurable logo in default profile templates
-make html/captive-portal/profile-templates/default/logo.png
+make html/captive-portal/profile-templates/default/logo.svg
 #Make default theme.css in default profile templates
 make html/captive-portal/profile-templates/default/theme.css
 #Make default background in default profile templates
 make html/captive-portal/profile-templates/default/background.png
-        
+
 # Create server local RADIUS secret
 if [ ! -f /usr/local/pf/conf/local_secret ]; then
     head -c 512 /dev/urandom | sha256sum | base64 | head -c 32 > /usr/local/pf/conf/local_secret
@@ -1127,6 +1127,10 @@ fi
 %dir                    /usr/local/pf/conf/kafka
 %config                 /usr/local/pf/conf/kafka/kafka_server_jaas.conf.tt
 %dir                    /usr/local/pf/conf/locale
+%dir                    /usr/local/pf/conf/locale/vi
+%dir                    /usr/local/pf/conf/locale/vi/LC_MESSAGES
+%config(noreplace)      /usr/local/pf/conf/locale/vi/LC_MESSAGES/packetfence.po
+%config(noreplace)      /usr/local/pf/conf/locale/vi/LC_MESSAGES/packetfence.mo
 %dir                    /usr/local/pf/conf/locale/de
 %dir                    /usr/local/pf/conf/locale/de/LC_MESSAGES
 %config(noreplace)      /usr/local/pf/conf/locale/de/LC_MESSAGES/packetfence.po

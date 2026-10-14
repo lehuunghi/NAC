@@ -8,10 +8,10 @@
 
 [default]
 description=Default Profile
-logo=/profile-templates/default/logo.png
-redirecturl=http://www.packetfence.org/
+logo=/common/nac20.svg
+redirecturl=https://20.com.vn/
 always_use_redirecturl=disabled
-locale=en_US
+locale=vi_VN
 filter_match_style=any
 block_interval=10m
 sms_pin_retry_limit=0

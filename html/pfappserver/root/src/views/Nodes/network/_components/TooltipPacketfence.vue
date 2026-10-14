@@ -2,7 +2,7 @@
   <b-card no-body
     class="tooltip-packetfence" :id="`tooltip-${id}`">
     <b-card-header class="p-2">
-      <h5 class="mb-0">PacketFence</h5>
+      <h5 class="mb-0">NAC20</h5>
       <p class="mb-0"><mac>{{ version }}</mac></p>
     </b-card-header>
   </b-card>

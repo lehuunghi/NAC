@@ -218,9 +218,7 @@ const setup = (props, context) => {
           $store.dispatch('session/setLanguage', { lang })
         }
         else { // use browser language
-          lang = window.navigator.language.split(/-/)[0]
-          if (!['en', 'fr'].includes(lang))
-            lang = 'en'
+          lang = 'vi'
           $store.dispatch('session/setLanguage', { lang })
         }
       })

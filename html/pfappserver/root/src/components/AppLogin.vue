@@ -12,8 +12,8 @@
             <b-col cols="auto" md="auto" class="ml-auto text-right">
               <b-dropdown variant="link" :text="$t(currentLanguage.label)">
                 <b-dropdown-item v-for="language in languages" :key="language.locale"
-                  :disabled="language.locale === $i18n.locale"
-                  @click="setLanguage(language.locale)"
+                  :disabled="language.language === $i18n.locale"
+                  @click="setLanguage(language.language)"
                   >{{ $t(language.label) }}</b-dropdown-item>
               </b-dropdown>
             </b-col>
@@ -225,7 +225,7 @@ const setup = (props, context) => {
     }
   }
 
-  const currentLanguage = computed(() => languages.find(language => language.locale === i18n.locale) || languages[0])
+  const currentLanguage = computed(() => languages.find(language => language.language === i18n.locale) || languages[0])
   const setLanguage = lang => $store.dispatch('session/setLanguage', { lang })
 
   return {
