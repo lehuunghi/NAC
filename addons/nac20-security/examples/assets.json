@@ -1,0 +1,5 @@
+[
+  {"mac":"02:00:00:00:00:01","name":"Laptop Lab 01","vendor":"mikrotik","vlan":20,"protected":false},
+  {"mac":"02:00:00:00:00:02","name":"Máy quản trị Lab","vendor":"fortigate","vlan":10,"protected":true},
+  {"mac":"02:00:00:00:00:03","name":"Laptop Lab 03","vendor":"ruijie","vlan":30,"protected":false}
+]

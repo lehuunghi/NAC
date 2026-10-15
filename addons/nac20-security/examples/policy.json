@@ -1,0 +1,11 @@
+{
+  "id": "lab-suricata-1001",
+  "enabled": false,
+  "scopes": ["lab"],
+  "sensors": ["lab-sensor-01"],
+  "signature_ids": [1001],
+  "max_severity": 2,
+  "max_age_seconds": 300,
+  "cooldown_seconds": 600,
+  "max_plans_per_hour": 5
+}
