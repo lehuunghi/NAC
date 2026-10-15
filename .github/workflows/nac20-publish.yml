@@ -1,0 +1,78 @@
+name: Publish verified NAC20 installer
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_run_id:
+        description: Successful NAC20 installer build run ID
+        required: true
+        type: string
+      release_tag:
+        description: Preview release tag
+        required: true
+        default: nac20-16.0.0-preview.1
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      BUILD_RUN_ID: ${{ inputs.build_run_id }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+    steps:
+      - name: Validate successful installer build
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$BUILD_RUN_ID" =~ ^[0-9]+$ ]]
+          [[ "$RELEASE_TAG" =~ ^nac20-[0-9]+\.[0-9]+\.[0-9]+-preview\.[0-9]+$ ]]
+          gh api "repos/$GH_REPO/actions/runs/$BUILD_RUN_ID" > build-run.json
+          jq -e '.conclusion == "success" and .event == "workflow_dispatch" and .path == ".github/workflows/nac20-installer.yml"' build-run.json
+      - uses: actions/download-artifact@v4
+        with:
+          name: nac20-debian12-amd64
+          path: output
+          run-id: ${{ inputs.build_run_id }}
+          github-token: ${{ github.token }}
+      - name: Verify, stage and publish release
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd output
+          sha256sum --check --strict SHA256SUMS
+          tar -xzf nac20-debian12-amd64-online.tar.gz
+          cd nac20-debian12-amd64-online
+          sha256sum --check --strict SHA256SUMS
+          cd ../..
+          SHA=$(jq -r .source_commit output/BUILDINFO.json)
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$SHA" = "$(jq -r .head_sha build-run.json)"
+          cat > release-notes.md <<EOF
+          Bộ cài NAC20 online cho Debian 12 amd64 — Công Ty TNHH TN20, 20.com.vn.
+
+          Gồm 11 gói Debian: máy chủ, Connector và AD/NTLM tùy chọn; giao diện NAC20 đã biên dịch; tiếng Việt mặc định; script cài và hướng dẫn đầy đủ bằng tiếng Việt.
+
+          Tải nac20-debian12-amd64-online.tar.gz, SHA256SUMS và BUILDINFO.json vào cùng thư mục. Đọc README_VI.md trước khi cài; kiểm tra SHA-256 rồi chọn install.sh server hoặc install.sh connector trên hai máy riêng.
+
+          Đã kiểm tra nội dung gói, chương trình ELF, giao diện đã build, bản dịch, bảo vệ cài đặt cũ và giải quyết phụ thuộc trên Debian 12 sạch. Chưa nghiệm thu cài đặt systemd hoàn chỉnh trên VPS hoặc RADIUS/MAB với thiết bị thật. Bản preview cần thử trên môi trường riêng.
+
+          Bộ cài cần Internet cho phụ thuộc và ảnh dịch vụ; runtime dùng nhãn latest, chưa phải bộ offline/bất biến. Các gói chưa có chữ ký phát hành riêng; đối chiếu nguồn GitHub và SHA-256.
+
+          Commit nguồn: $SHA
+          Lượt dựng: https://github.com/$GH_REPO/actions/runs/$BUILD_RUN_ID
+          EOF
+          gh release create "$RELEASE_TAG" --target "$SHA" --title "NAC20 Debian 12 amd64 — Preview" --prerelease --draft --notes-file release-notes.md
+          gh release upload "$RELEASE_TAG" \
+            output/nac20-debian12-amd64-online.tar.gz \
+            output/SHA256SUMS output/BUILDINFO.json \
+            output/nac20-debian12-amd64-online/README_VI.md \
+            output/nac20-debian12-amd64-online/docs/NAC20_CAI_DAT.md
+          gh release edit "$RELEASE_TAG" --draft=false
+          gh release view "$RELEASE_TAG" --json url,assets --jq '{url: .url, assets: [.assets[] | {name, size}]}'
