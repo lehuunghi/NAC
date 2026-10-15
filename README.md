@@ -26,6 +26,12 @@ Máy chủ phải có locale `vi_VN.UTF-8`. Trên Debian, bật `vi_VN.UTF-8 UTF
 
 Cấu hình mặc định dùng tên máy chủ `nac20`, tên miền `20.com.vn` và chuyển hướng sau đăng ký đến `https://20.com.vn/`. Quản trị viên phải cấu hình DNS và chứng thư TLS phù hợp với môi trường thực tế.
 
+## NAC20 Security
+
+Nền tảng giám sát NAC20 Security giai đoạn 1 (observe-only, chưa triển khai production)
+được mô tả trong [báo cáo kiến trúc và kiểm toán](docs/NAC20_SECURITY_GIAI_DOAN_1.md),
+với [hướng dẫn thử nghiệm Security Events/Inventory/Suricata](addons/nac20-security/README.md).
+
 ## Thiết kế dịch vụ SaaS
 
 [Đặc tả NAC20 SaaS cho nhiều công ty độc lập](docs/NAC20_SAAS_DAC_TA.md) mô tả cổng quản trị chung, môi trường NAC riêng cho từng công ty, phân quyền, cấp phát tự động, đăng ký Connector, API, thuê bao và tiêu chí nghiệm thu. Đây là thiết kế để triển khai, chưa phải chức năng SaaS đã có trong bộ cài preview.
