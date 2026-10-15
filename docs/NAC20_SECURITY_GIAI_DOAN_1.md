@@ -1,5 +1,9 @@
 # NAC20 Security — kiểm toán và triển khai nền tảng phương án A
 
+Phần nền tảng ban đầu bên dưới ghi nhận trạng thái tại commit đầu. Bản mở rộng
+registry/người dùng/dashboard/thông báo/mô phỏng cách ly và DB schema 2 nằm trong
+[NAC20_SECURITY_VAN_HANH.md](NAC20_SECURITY_VAN_HANH.md).
+
 Ngày 15/10/2026. Mốc kiểm toán: `9464658bc1c92d0926155f71d7a0ac740a8d3d30`
 trên `main`; nhánh làm việc `codex/nac20-security-foundation`.
 

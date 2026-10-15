@@ -31,6 +31,8 @@ Cấu hình mặc định dùng tên máy chủ `nac20`, tên miền `20.com.vn`
 Nền tảng giám sát NAC20 Security giai đoạn 1 (observe-only, chưa triển khai production)
 được mô tả trong [báo cáo kiến trúc và kiểm toán](docs/NAC20_SECURITY_GIAI_DOAN_1.md),
 với [hướng dẫn thử nghiệm Security Events/Inventory/Suricata](addons/nac20-security/README.md).
+[Bản mở rộng vận hành lab](docs/NAC20_SECURITY_VAN_HANH.md) bổ sung liên kết người dùng,
+dashboard sự cố, Telegram/Email và quy trình mô phỏng cách ly/khôi phục có audit.
 
 ## Thiết kế dịch vụ SaaS
 

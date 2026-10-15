@@ -1,6 +1,9 @@
 # NAC20 Security — nền tảng giai đoạn 1
 
 Đây là công cụ thử nghiệm **observe-only**, Python 3.10+ chỉ dùng thư viện chuẩn.
+Bản mở rộng vận hành có registry thiết bị, liên kết username, dashboard HTML,
+outbox Telegram/Email và quy trình mô phỏng cách ly/khôi phục theo điều kiện;
+xem [hướng dẫn vận hành lab](../../docs/NAC20_SECURITY_VAN_HANH.md).
 Nhận tệp Suricata EVE JSONL và bản xuất inventory, lưu SQLite riêng, tra cứu sự kiện
 và ghi nhận trạng thái xử lý. Không có API mạng, lệnh thực thi, thông tin đăng nhập
 PacketFence, thay đổi VLAN, CoA, firewall hoặc đường gọi hàng đợi PacketFence.
@@ -36,7 +39,8 @@ Quyền truy cập hiện dựa vào tài khoản hệ điều hành và quyền
 
 ## Hợp đồng inventory và resolver
 
-Mỗi binding gồm `ip`, MAC unicast, `valid_from`, `valid_until`, cả hai có múi giờ.
+Mỗi binding gồm `ip`, MAC unicast, `valid_from`, `valid_until`, cả hai có múi giờ;
+có thể bổ sung `username` từ phiên xác thực cùng thời điểm.
 Khoảng hiệu lực là `[valid_from, valid_until)`. Lệnh inventory thay thế nguyên tử
 toàn bộ binding của một `scope`; tệp `[]` chủ động xóa scope đó. Scope khác được giữ.
 Scope biểu diễn một miền địa chỉ mạng không chồng lấn; dùng scope riêng cho tenant,
@@ -96,11 +100,13 @@ DB thử nghiệm theo quy trình của đơn vị khi kết thúc; không xóa 
 
 - Exporter/API đọc inventory trực tiếp từ PacketFence có xác thực, TTL và lịch sử.
 - Daemon thu log liên tục, checkpoint, rotation, backpressure, health/metrics và retention.
-- REST API/RBAC, giao diện Security dashboard, thông báo email/webhook, tìm kiếm phân trang.
+- REST API/RBAC, dashboard live trong PacketFence, notification daemon/webhook, tìm kiếm phân trang.
 - Rule correlation, threat intelligence, malware file scanning và chính sách risk score.
-- Workflow đề xuất/phê duyệt cách ly, rollback, protected devices và enforcement adapter.
+- Phê duyệt có xác thực, rollback trên thiết bị thật và enforcement adapter.
 - Gói Debian/systemd và kiểm thử end-to-end trên PacketFence, Suricata, switch thật.
 
+Danh sách trên phản ánh phần còn lại của tích hợp production; chức năng lab đã có
+được mô tả trong hướng dẫn vận hành.
 Những phần này cần được thiết kế/kiểm chứng tiếp; **không có công tắc bật enforcement**
 trong module hiện tại. Báo cáo kiến trúc, kiểm toán và lộ trình ở
 [NAC20_SECURITY_GIAI_DOAN_1.md](../../docs/NAC20_SECURITY_GIAI_DOAN_1.md).

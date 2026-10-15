@@ -81,7 +81,7 @@ class Store:
         self.db = sqlite3.connect(path, timeout=10)
         self.db.row_factory = sqlite3.Row
         version = self.db.execute("PRAGMA user_version").fetchone()[0]
-        if version not in (0, 1):
+        if version not in (0, 1, 2):
             self.db.close()
             raise ValueError("unsupported database schema version")
         self.db.executescript("""
@@ -101,13 +101,26 @@ class Store:
                 id INTEGER PRIMARY KEY, event_id TEXT NOT NULL,
                 changed_at TEXT NOT NULL, actor TEXT NOT NULL,
                 old_status TEXT NOT NULL, new_status TEXT NOT NULL);
-            PRAGMA user_version=1;
         """)
+        columns = {row[1] for row in self.db.execute("PRAGMA table_info(bindings)")}
+        if "username" not in columns:
+            with self.db:
+                self.db.execute("BEGIN IMMEDIATE")
+                self.db.execute("""CREATE TABLE bindings_v2 (
+                    scope TEXT NOT NULL, ip TEXT NOT NULL, mac TEXT NOT NULL,
+                    valid_from TEXT NOT NULL, valid_until TEXT NOT NULL,
+                    username TEXT NOT NULL DEFAULT '',
+                    PRIMARY KEY(scope,ip,mac,valid_from,valid_until,username))""")
+                self.db.execute("INSERT INTO bindings_v2 SELECT *, '' FROM bindings")
+                self.db.execute("DROP TABLE bindings")
+                self.db.execute("ALTER TABLE bindings_v2 RENAME TO bindings")
+                self.db.execute("CREATE INDEX bindings_lookup ON bindings(scope,ip)")
+                self.db.execute("PRAGMA user_version=2")
 
     def close(self):
         self.db.close()
 
-    def replace_inventory(self, scope, records):
+    def replace_inventory(self, scope, records, audit=None):
         """Atomic replacement for one network scope, validated before deletion."""
         text(scope, "scope")
         if not isinstance(records, list):
@@ -123,19 +136,35 @@ class Store:
             start, end = timestamp(record.get("valid_from")), timestamp(record.get("valid_until"))
             if end <= start:
                 raise ValueError("binding validity must have a positive duration")
-            rows.append((scope, ip, mac, start, end))
+            username = record.get("username", "")
+            if username:
+                text(username, "username")
+            elif username != "":
+                raise ValueError("username must be a string")
+            rows.append((scope, ip, mac, start, end, username))
         with self.db:
             self.db.execute("DELETE FROM bindings WHERE scope=?", (scope,))
-            self.db.executemany("INSERT OR IGNORE INTO bindings VALUES (?,?,?,?,?)", rows)
+            self.db.executemany("INSERT OR IGNORE INTO bindings VALUES (?,?,?,?,?,?)", rows)
+            if audit is not None:
+                audit(len(set(rows)))
         return len(set(rows))
 
     def resolve(self, scope, ip, at):
         ip, at = address(ip), timestamp(at)
-        rows = self.db.execute("""SELECT DISTINCT mac FROM bindings
+        rows = self.db.execute("""SELECT DISTINCT mac,username FROM bindings
             WHERE scope=? AND ip=? AND valid_from<=? AND valid_until>? ORDER BY mac""",
             (scope, ip, at, at)).fetchall()
-        if len(rows) == 1:
-            return {"state": "resolved", "mac": rows[0]["mac"], "evidence": "inventory_interval"}
+        macs = {row["mac"] for row in rows}
+        if len(macs) == 1:
+            result = {"state": "resolved", "mac": rows[0]["mac"], "evidence": "inventory_interval"}
+            users = {row["username"] for row in rows if row["username"]}
+            if users:
+                result["user"] = ({"state": "resolved", "username": next(iter(users))}
+                                  if len(users) == 1 and all(row["username"] for row in rows)
+                                  else {"state": "ambiguous"})
+            else:
+                result["user"] = {"state": "unresolved"}
+            return result
         return {"state": "ambiguous" if rows else "unresolved"}
 
     def ingest(self, eve, sensor, scope):
