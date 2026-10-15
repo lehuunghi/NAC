@@ -117,7 +117,7 @@ case "$1" in
         fi
 
         mkdir -p /usr/local/pf/html/captive-portal/profile-templates/default
-        cp /usr/local/pf/html/common/packetfence-cp.png /usr/local/pf/html/captive-portal/profile-templates/default/logo.png
+        cp /usr/local/pf/html/common/nac20.svg /usr/local/pf/html/captive-portal/profile-templates/default/logo.svg
 
         # managing services
         set +e
