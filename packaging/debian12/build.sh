@@ -4,6 +4,9 @@ export DEBIAN_FRONTEND=noninteractive
 export GOFLAGS='-p=2'
 export GOMAXPROCS=2
 export NODE_OPTIONS=--max-old-space-size=4096
+export npm_config_fetch_retries=5
+export npm_config_fetch_retry_mintimeout=2000
+export npm_config_fetch_retry_maxtimeout=20000
 
 test "$(dpkg --print-architecture)" = amd64
 . /etc/os-release
@@ -26,7 +29,15 @@ apt-get install -y --no-install-recommends python3-distutils
 # Build the actual administration UI; do not package a source-only frontend.
 (
   cd html/pfappserver/root
-  npm ci --no-audit --no-fund
+  for attempt in 1 2 3; do
+    if npm ci --no-audit --no-fund; then break; fi
+    if [[ "$attempt" == 3 ]]; then
+      cp /root/.npm/_logs/*debug*.log /out/ 2>/dev/null || true
+      exit 1
+    fi
+    echo "npm download interrupted; retrying ($attempt/3)."
+    sleep 3
+  done
   npm run build > /out/frontend-build.log 2>&1 || { tail -n 80 /out/frontend-build.log; exit 1; }
   rm -rf node_modules
 )

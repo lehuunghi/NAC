@@ -16,7 +16,7 @@ NAC20 quản lý việc kết nối vào mạng có dây và không dây, xác t
 
 Hướng dẫn cài đặt chi tiết bằng tiếng Việt nằm trong [Cài đặt NAC20](docs/NAC20_CAI_DAT.md) và hiển thị trực tiếp tại **Trạng thái → Giới thiệu** trên giao diện quản trị. Nội dung gồm chuẩn bị bộ cài, VPS, TLS, Connector, xác thực MAC, nhập MAC qua API và kiểm thử.
 
-Kho hiện chưa có bộ cài NAC20 trong mục Releases. Cần xây dựng và nghiệm thu bộ gói từ đúng phiên bản mã nguồn trước khi thực hiện bước cài đặt gói; không có kho APT NAC20 tại 20.com.vn được công bố trong kho này.
+Quy trình **NAC20 Debian 12 installer** trong GitHub Actions tạo bộ cài online gồm gói server, Connector, script cài và SHA-256. Dùng bộ cài từ bản phát hành thành công trong [Releases](https://github.com/lehuunghi/NAC/releases), đọc trạng thái preview/nghiệm thu và `BUILDINFO.json` trước khi cài. Chưa có kho APT NAC20 riêng tại 20.com.vn.
 
 Đây là hệ thống máy chủ Linux, không phải ứng dụng chỉ cần mở một trang HTML. Hãy xây dựng gói cài đặt bằng quy trình trong kho mã nguồn và kiểm tra trên môi trường thử nghiệm trước khi đưa vào vận hành.
 

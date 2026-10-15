@@ -2,7 +2,7 @@
 export const installation = {
   title: 'Cài đặt NAC20 từ đầu',
   subtitle: 'Triển khai máy chủ trên VPS, kết nối mạng nội bộ và xác thực thiết bị bằng địa chỉ MAC.',
-  packageNotice: 'Kho GitHub hiện cung cấp mã nguồn, chưa có bộ cài NAC20 được phát hành trong mục Releases. Phần cài gói bên dưới yêu cầu bộ .deb đã được xây dựng từ đúng phiên bản NAC20 và kho phụ thuộc tương ứng. Chỉ tải mã nguồn hoặc chạy npm build chưa tạo thành một máy chủ NAC hoạt động.',
+  packageNotice: 'Lấy bộ cài từ bản phát hành NAC20 thành công trong mục Releases của kho lehuunghi/NAC; kiểm tra BUILDINFO.json và SHA256SUMS. Bộ cài Debian 12 hiện được thiết kế theo dạng online: cần Internet để tải phụ thuộc và ảnh dịch vụ. Chỉ tải mã nguồn hoặc chạy npm build chưa tạo thành một máy chủ NAC hoạt động. Nếu chưa có bản phát hành thành công, cần chờ quy trình đóng gói hoàn tất.',
   commandNotice: 'Các lệnh Linux dưới đây dành cho Debian 12 x86_64. Đọc nhãn để chạy đúng máy: VPS, máy Connector hoặc máy đóng gói. Tên miền, IP, MAC và ID vai trò đều là ví dụ cần thay bằng giá trị của bạn.',
   architecture: ['Thiết bị người dùng', 'Switch / Wi-Fi nội bộ', 'Connector tại công ty', 'NAC20 trên VPS'],
   requirements: [
@@ -44,7 +44,7 @@ getent ahostsv4 nac20.20.com.vn` }],
     {
       id: 'packages', title: 'Chuẩn bị bộ cài NAC20 đúng phiên bản',
       summary: 'Phân biệt mã nguồn, môi trường đóng gói và gói có thể cài lên VPS.',
-      paragraphs: ['Hiện chưa có kho APT riêng tại 20.com.vn hoặc tệp cài NAC20 công khai được xác nhận. Không dùng lệnh apt install nac20 hay URL tải bộ cài tự đoán. Bộ .deb phải được xây dựng từ nhánh main này, bao gồm giao diện đã biên dịch, các chương trình nền, tài nguyên cấu hình và bản dịch.', 'Nếu đã nhận bộ gói NAC20 được nghiệm thu, chuyển sang bước 3. Nếu chưa có, dừng trước bước cài gói và chuẩn bị bộ phát hành với người phụ trách đóng gói. Gói tải từ nguồn nền tảng khác không tự chứa các thay đổi NAC20 trong kho này.'],
+      paragraphs: ['Trong mục Releases của kho lehuunghi/NAC, chọn bản NAC20 dành cho Debian 12 amd64 và tải nac20-debian12-amd64-online.tar.gz cùng SHA256SUMS. Chọn đúng trạng thái preview hoặc bản nghiệm thu theo môi trường của bạn. Không có lệnh apt install nac20 từ một kho APT riêng tại 20.com.vn.', 'Bên trong bộ cài có thư mục server, connector, nhóm connector-ad tùy chọn, install.sh và BUILDINFO.json ghi phiên bản cùng commit nguồn. Chạy chế độ --check trước khi --install. Không cài nhóm server và connector trên cùng một máy.', 'Nếu chưa có bản phát hành thành công, cần hoàn tất quy trình đóng gói trước khi cài. Gói tải từ nguồn nền tảng khác không tự chứa các thay đổi NAC20 trong kho này. Phần lấy mã nguồn bên dưới dành cho người đóng gói, không cần chạy khi đã có bộ cài.'],
       codeBlocks: [{ label: 'Máy đóng gói — lấy mã nguồn, không phải lệnh cài NAC20', code: String.raw`git clone --branch main --single-branch https://github.com/lehuunghi/NAC.git nac20-src
 cd nac20-src
 git rev-parse HEAD
@@ -58,6 +58,10 @@ head -n 1 debian/changelog` }],
       summary: 'Thực hiện trên VPS sau khi có bộ .deb được nghiệm thu.',
       paragraphs: ['Đặt các gói chỉ dành cho máy chủ vào /opt/nac20-packages/server. Không để các gói Connector từ xa trong thư mục này. Kiểm tra tên, phiên bản, kiến trúc và tổng kiểm theo danh sách của bên phát hành trước khi cài.', 'Tên gói, dịch vụ và thư mục nội bộ vẫn dùng các định danh nền tảng để tương thích. Giao diện sản phẩm là NAC20; không tự đổi tên file .deb, unit systemd hoặc thư mục /usr/local/pf.'],
       codeBlocks: [
+        { label: 'VPS — cách cài bằng bộ cài online đã tải về', code: String.raw`tar -xzf nac20-debian12-amd64-online.tar.gz
+cd nac20-debian12-amd64-online
+bash install.sh server --check
+sudo bash install.sh server --install` },
         { label: 'VPS — kiểm tra và cài các gói server đã được cung cấp', code: String.raw`find /opt/nac20-packages/server -maxdepth 1 -name '*.deb' -print
 for package in /opt/nac20-packages/server/*.deb; do
   dpkg-deb --field "$package" Package Version Architecture
@@ -91,15 +95,15 @@ openssl s_client -connect nac20.20.com.vn:1443 -servername nac20.20.com.vn -veri
     {
       id: 'connector', title: 'Cài Connector tại công ty và ghép với VPS',
       summary: 'Thực hiện trên máy Debian 12 trong LAN, không cài trên từng thiết bị.',
-      paragraphs: ['Đặt IP tĩnh hoặc DHCP reservation cho máy Connector, ví dụ 192.168.10.10. Máy phải truy cập được switch/Wi-Fi trong LAN và mở kết nối ra tên miền VPS trên TCP 1443. Cài gói Connector cùng phiên bản với máy chủ; dùng thư mục /opt/nac20-packages/connector chỉ chứa các gói của Connector.', 'Trình ghép nối hiện có thể in khóa chia sẻ ra terminal. Chạy trong phiên quản trị riêng, không ghi hình hoặc sao chép đầu ra chứa khóa vào hệ thống hỗ trợ. Không đưa nội dung file pfconnector-client.env vào Git.'],
+      paragraphs: ['Đặt IP tĩnh hoặc DHCP reservation cho máy Connector, ví dụ 192.168.10.10. Máy phải truy cập được switch/Wi-Fi trong LAN và mở kết nối ra tên miền VPS trên TCP 1443. Cài gói Connector cùng phiên bản với máy chủ. Nếu dùng bộ cài online, chạy bash install.sh connector --check rồi sudo bash install.sh connector --install trên máy Connector; không chạy lựa chọn server tại đây. Phần lệnh APT bên dưới chỉ áp dụng cho cách cài gói thủ công đã chuẩn bị đầy đủ phụ thuộc.', 'Trình ghép nối hiện có thể in khóa chia sẻ ra terminal. Chạy trong phiên quản trị riêng, không ghi hình hoặc sao chép đầu ra chứa khóa vào hệ thống hỗ trợ. Không đưa nội dung file pfconnector-client.env vào Git.'],
       codeBlocks: [{ label: 'Máy Connector — cài gói và bắt đầu ghép nối', code: String.raw`apt-get update
 apt-get install /opt/nac20-packages/connector/*.deb
 /usr/local/pfconnector-remote/bin/pfconnector-configure` }],
       items: ['Ghi lại Connector ID xuất hiện trên terminal; giữ trình cấu hình chờ nhập khóa.', 'Trên NAC20: vào Cấu hình → Cấu hình hệ thống → Bộ kết nối; tạo Connector có cùng ID, mô tả chi nhánh và một khóa ngẫu nhiên riêng.', 'Khai báo đúng các CIDR phía công ty, ví dụ 192.168.10.0/24. Bổ sung mạng quản trị switch, máy chủ AD hoặc DNS nếu chúng nằm ở subnet khác. Không dùng 0.0.0.0/0 để thay cho việc xác định mạng cần truy cập.', 'Trở lại terminal, nhập khóa và địa chỉ https://nac20.20.com.vn:1443/api/v1/pfconnector/tunnel. Chọn y khi được hỏi xác minh chứng thư TLS; chứng thư phải được tin cậy.', 'Nếu dùng AD/LDAP nội bộ, khai báo thêm ánh xạ miền và DNS trong các tab của Bộ kết nối. Chỉ dùng danh sách MAC thì chưa cần tích hợp AD.'],
       codeBlocksAfter: [{ label: 'Máy Connector — khởi động lại và xem trạng thái', code: String.raw`chmod 600 /usr/local/pfconnector-remote/conf/pfconnector-client.env
-systemctl restart packetfence-pfconnector-remote
-systemctl status packetfence-pfconnector-remote --no-pager
-journalctl -u packetfence-pfconnector-remote -n 50 --no-pager` }],
+systemctl restart packetfence-pfconnector-remote-combined
+systemctl status packetfence-pfconnector-remote-combined --no-pager
+journalctl -u packetfence-pfconnector-remote-combined -n 50 --no-pager` }],
       expected: 'Connector hiện trạng thái kết nối trên NAC20. Nếu mất kết nối, kiểm tra DNS, giờ, TLS, khóa, firewall và dịch vụ; chưa bật xác thực lên các cổng sản xuất.'
     },
     {

@@ -20,6 +20,7 @@ jobs:
           BUILDER_IMAGE: ghcr.io/inverse-inc/packetfence/pfbuild-debian-bookworm:latest
         run: |
           set -euo pipefail
+          bash -n packaging/debian12/build.sh packaging/debian12/install.sh packaging/debian12/check-dependencies.sh
           mkdir -p "$RUNNER_TEMP/nac20-output"
           docker pull "$BUILDER_IMAGE"
           BUILDER_DIGEST=$(docker image inspect "$BUILDER_IMAGE" --format '{{index .RepoDigests 0}}')
@@ -32,6 +33,15 @@ jobs:
             "$BUILDER_DIGEST" \
             bash /source/packaging/debian12/build.sh \
             2>&1 | tee "$RUNNER_TEMP/nac20-output/build.log"
+      - name: Verify installation dependencies on clean Debian 12
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE/packaging:/checks:ro" \
+            -v "$RUNNER_TEMP/nac20-output:/bundle:ro" \
+            debian:12 bash /checks/debian12/check-dependencies.sh \
+            2>&1 | tee -a "$RUNNER_TEMP/nac20-output/build.log"
       - name: Upload installation bundle
         uses: actions/upload-artifact@v4
         with:
