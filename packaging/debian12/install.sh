@@ -24,10 +24,14 @@ if [[ "$action" == --check ]]; then
 fi
 [[ "$EUID" == 0 ]] || { echo 'Run the installer as root.' >&2; exit 1; }
 [[ -d /run/systemd/system ]] || { echo 'Requires a Debian host booted with systemd, not a build container.' >&2; exit 1; }
-if dpkg-query -W -f='${db:Status-Status}\n' packetfence packetfence-pfconnector-remote 2>/dev/null | grep -q '^installed$'; then
-  echo 'An existing installation was detected. Use a tested upgrade procedure and backup instead of the fresh installer.' >&2
-  exit 1
-fi
+for name in packetfence packetfence-pfconnector-remote; do
+  state=$(dpkg-query -W -f='${db:Status-Status}' "$name" 2>/dev/null || true)
+  case "$state" in
+    installed|unpacked|half-configured|half-installed)
+      echo 'An existing or incomplete installation was detected. Use a tested recovery/upgrade procedure instead of the fresh installer.' >&2
+      exit 1 ;;
+  esac
+done
 read -r series < "$bundle/DEPENDENCY_SERIES"
 [[ "$series" =~ ^[0-9]+\.[0-9]+$ ]] || { echo 'Invalid dependency series.' >&2; exit 1; }
 echo 'Installing NAC20 on a dedicated Debian 12 host. Internet access is required for dependencies and service images.'

@@ -18,6 +18,8 @@ Hướng dẫn cài đặt chi tiết bằng tiếng Việt nằm trong [Cài đ
 
 Quy trình **NAC20 Debian 12 installer** trong GitHub Actions tạo bộ cài online gồm gói server, Connector, script cài và SHA-256. Dùng bộ cài từ bản phát hành thành công trong [Releases](https://github.com/lehuunghi/NAC/releases), đọc trạng thái preview/nghiệm thu và `BUILDINFO.json` trước khi cài. Chưa có kho APT NAC20 riêng tại 20.com.vn.
 
+[Hướng dẫn đầy đủ cho bộ cài](packaging/debian12/README_VI.md) có 14 phần, gồm tải/kiểm tra SHA-256, cài máy chủ, ghép Connector, MAB, API và xử lý lỗi. Tài liệu này cũng nằm trong tệp nén bộ cài với tên `README_VI.md`.
+
 Đây là hệ thống máy chủ Linux, không phải ứng dụng chỉ cần mở một trang HTML. Hãy xây dựng gói cài đặt bằng quy trình trong kho mã nguồn và kiểm tra trên môi trường thử nghiệm trước khi đưa vào vận hành.
 
 Máy chủ phải có locale `vi_VN.UTF-8`. Trên Debian, bật `vi_VN.UTF-8 UTF-8` trong `/etc/locale.gen` rồi chạy `locale-gen`. Trên hệ thống dùng glibc có thể chạy `localedef -i vi_VN -f UTF-8 vi_VN.UTF-8`. Chạy `make translation` để biên dịch bộ dịch cổng đăng ký; bản dịch quản trị được đóng gói cùng giao diện.

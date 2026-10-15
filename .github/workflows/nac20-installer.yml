@@ -20,7 +20,7 @@ jobs:
           BUILDER_IMAGE: ghcr.io/inverse-inc/packetfence/pfbuild-debian-bookworm:latest
         run: |
           set -euo pipefail
-          bash -n packaging/debian12/build.sh packaging/debian12/install.sh packaging/debian12/check-dependencies.sh
+          for script in packaging/debian12/*.sh; do bash -n "$script"; done
           mkdir -p "$RUNNER_TEMP/nac20-output"
           docker pull "$BUILDER_IMAGE"
           BUILDER_DIGEST=$(docker image inspect "$BUILDER_IMAGE" --format '{{index .RepoDigests 0}}')
